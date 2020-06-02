@@ -1,0 +1,159 @@
+.Main h2 {
+    margin-left: 20px;
+}
+.Main .container {
+  margin-left: 10px;
+}
+
+.Main .container img {
+  width: 40%;
+  margin-left: 50%;
+  position: absolute;
+  top: 33vh;
+}
+
+.Main .container-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.Main button {
+  width: 30%;
+  margin-top: 15vh;
+  border-radius: 4px;
+  color: #222;
+  background-color: white;
+  padding: 10px 18px;
+  font-size: 12px;
+  font-weight: 300;
+  border-color: #1a42b5;
+  box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Main button:hover {
+  box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Main .bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 70%;
+}
+.Main .bubble {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background: #3abff5;
+  animation: flying 10s infinite ease-in;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.Main .bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation-duration: 8s;
+}
+
+@keyframes flying {
+  0% {
+    bottom: -80px;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    bottom: 1080px;
+    transform: translateX(-200px);
+  }
+}
+
+@media (min-width: 600px) {
+
+  .Main h2 {
+        margin-left: 20px;
+    }
+    .Main .container {
+    margin-left: 20px;
+  }
+
+  .Main .container img {
+    width: 20%;
+    margin-left: 70%;
+    position: absolute;
+    top: 20vh;
+  }
+
+  .Main .container-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .Main button {
+    width: 15%;
+    margin-top: 15vh;
+    margin-left: 30vh;
+    border-radius: 4px;
+    color: #222;
+    background-color: white;
+    padding: 15px 22px;
+    font-size: 15px;
+    font-weight: 300;
+    border-color: #1a42b5;
+    box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+      7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .Main button:hover {
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+      inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .Main .bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 70%;
+  }
+  .bubble {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    background: #3abff5;
+    animation: flying 10s infinite ease-in;
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+
+  .Main .bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 8s;
+  }
+
+  @keyframes flying {
+    0% {
+      bottom: -80px;
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100px);
+    }
+    100% {
+      bottom: 1080px;
+      transform: translateX(-200px);
+    }
+  }
+}
