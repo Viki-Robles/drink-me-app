@@ -1,5 +1,5 @@
 import React from "react";
-import martini from "./images/martini.jpg";
+import martini from "./images/martini.png";
 import "./Main.css";
 
 
@@ -7,7 +7,7 @@ export default function Main() {
     return (
         <div className="Main">
             <div className="container">
-                <h2>Here is our App</h2>
+                <h2>Let's do some Chemistry together..</h2>
                 <div className="bubbles">
                     <div className="bubble"></div>
                     <div className="bubble"></div>
@@ -17,15 +17,24 @@ export default function Main() {
                     <div className="bubble"></div>
                 </div>
                 <div className="container-text">
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. <br />
-                Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.<br />
-                Donec eu libero sit amet quam egestas semper.</p>
+                    <p>
+                        <span>D</span>
+                        <span>r</span>
+                        <span>i</span>
+                        <span>n</span>
+                        <span>k</span>
+                        <span>M</span>
+                        <span>e</span>
+                        <span>A</span>
+                        <span>p</span>
+                        <span>p</span>
+                    is an application where you can be creative at home and experiment<br />
+                    by exploring the different type of coctails and drinks that are available on our "DYI" guide.<br />
+                    </p>
                 </div>
                 <div className="container-buttons">
                     <button>By Ingredient</button>
-                    <button>I feel lucky today</button>
-                </div>
-                <div className="container-image">
+                    <button>Feeling lucky</button>
                     <img src={martini} alt="martini" />
                 </div>
             </div>
