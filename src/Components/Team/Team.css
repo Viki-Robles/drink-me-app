@@ -1,35 +1,35 @@
 .Team h3 {
-    font-size: 16px;
-    text-transform: uppercase;
-    Color: #5a0353;
-    margin: 0;
-    padding: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #4155b1;
+  margin: 0;
+  padding: 0;
 }
 
 .Team h2 {
-    font-size: 48px;
-    color: fff;
-    margin-bottom: 48px;
-    margin-top: 0;
+  font-size: 48px;
+  color: fff;
+  margin-bottom: 48px;
+  margin-top: 0;
 }
 
 .Team {
-    background-color: #fff;
-    text-align: center;
-    padding-top: 80px;
-    padding-right: 0;
-    padding-bottom: 120px;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 80px;
+  padding-right: 0;
+  padding-bottom: 120px;
 }
 
 .Team .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .teamContainer img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #5a0353;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 2px 3px 9px #4155b1;
 }

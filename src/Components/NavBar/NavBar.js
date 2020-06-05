@@ -1,33 +1,34 @@
-import React, { useState } from 'react';
-import NavBarIcon from './NavBar.svg';
-import './NavBar.css';
+import React, { useState } from "react";
+import "./NavBar.css";
+import { FaAlignJustify } from "react-icons/fa";
 
 export default function NavBar() {
-    const [isOpen, setIsOpen] = useState(false);
-    return (
-        <div className="NavBar">
-            <NavBarButton onButtonSwitched={() => setIsOpen(!isOpen)} />
-            <NavBarBox isOpen={isOpen} />
-        </div>
-    );
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="NavBar">
+      <NavBarButton onButtonSwitched={() => setIsOpen(!isOpen)} />
+      <NavBarBox isOpen={isOpen} />
+    </div>
+  );
 }
+
 function NavBarButton({ onButtonSwitched }) {
-    return (
-        <button
-            className="NavBar-button"
-            onClick={() => onButtonSwitched()}
-        >
-            <img src={NavBarIcon} alt="NavBar icon" />
-        </button>
-    );
+  return (
+      <button className="NavBar-button" onClick={() => onButtonSwitched()}>
+        <FaAlignJustify className="NavBar-hamburguer" />
+      </button>
+  );
 }
 function NavBarBox({ isOpen }) {
-    return (
-        <div className={`NavBar-box ${isOpen ? 'is-open' : ''}`}>
-            <div className="NavBar-box-link">Home</div>
-            <div className="NavBar-box-link">Team</div>
-            <div className="NavBar-box-link">Contact</div>
-            <div className="NavBar-box-link">Random</div>
-        </div>
-    );
+  return (
+    <div className="NavBar-logo-menu">
+      <div className="NavBar-logo">DrinkMeApp</div>
+      <div className={`NavBar-box ${isOpen ? "is-open" : ""}`}>
+        <div className="NavBar-box-link">Home</div>
+        <div className="NavBar-box-link">Team</div>
+        <div className="NavBar-box-link">Contact</div>
+        <div className="NavBar-box-link">Random</div>
+      </div>
+    </div>
+  );
 }
