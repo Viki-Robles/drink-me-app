@@ -5,7 +5,17 @@ import Drink from "../Drink/Drink.js";
 export default function Results() {
   return (
     <div className="Results">
+    <div className="results-header">Fancy any of these?</div>
       <div className="results-container">
+        <Drink />
+        <Drink />
+        <Drink />
+        <Drink />
+        <Drink />
+        <Drink />
+        <Drink />
+        <Drink />
+        <Drink />
         <Drink />
         <Drink />
         <Drink />

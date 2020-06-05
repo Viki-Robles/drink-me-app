@@ -1,4 +1,5 @@
 import React from 'react';
+import './TeamMember.css';
 
 export default function TeamMember(props) {
     return (
