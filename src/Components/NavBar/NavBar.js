@@ -1,20 +1,33 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import NavBarIcon from './NavBar.svg';
 import './NavBar.css';
 
-class NavBar extends Component {
-    render() {
-        const sections = [
-            'Home', 'Team', 'Contact', 'Random'];
-        const navLinks = sections.map(section => (
-            <li><a href={'#' + section}>{section}</a></li>
-        )
-        );
-        return (
-            <nav>
-                <h2 className="Logo">DrinkMeApp</h2>
-                <ul>{navLinks}</ul>
-            </nav>
-        );
-    }
+export default function NavBar() {
+    const [isOpen, setIsOpen] = useState(false);
+    return (
+        <div className="NavBar">
+            <NavBarButton onButtonSwitched={() => setIsOpen(!isOpen)} />
+            <NavBarBox isOpen={isOpen} />
+        </div>
+    );
 }
-export default NavBar;
+function NavBarButton({ onButtonSwitched }) {
+    return (
+        <button
+            className="NavBar-button"
+            onClick={() => onButtonSwitched()}
+        >
+            <img src={NavBarIcon} alt="NavBar icon" />
+        </button>
+    );
+}
+function NavBarBox({ isOpen }) {
+    return (
+        <div className={`NavBar-box ${isOpen ? 'is-open' : ''}`}>
+            <div className="NavBar-box-link">Home</div>
+            <div className="NavBar-box-link">Team</div>
+            <div className="NavBar-box-link">Contact</div>
+            <div className="NavBar-box-link">Random</div>
+        </div>
+    );
+}
