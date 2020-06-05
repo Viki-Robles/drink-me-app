@@ -7,7 +7,7 @@
 }
 
 .Drink .drink-container:hover {
-    box-shadow: 2px -2px 15px rgb(161, 42, 5);
+    box-shadow: 2px -2px 15px rgb(109, 231, 37);
 
 }
 
@@ -19,16 +19,18 @@
 }
 
 .Drink .overlay-title h3 {
-    font-family: 'Shadows Into Light', cursive;
+    /* font-family: 'Shadows Into Light', cursive; */
+    font-size: 1rem;
     color: white;
     text-shadow: 1px 1px 1px black;
     background-color: black;
     width: 110%;
     transform: rotate(-7deg);
     border-top:2px solid white;
+    padding: 5px 0px;
 }
 
 .Drink img {
     width: 100%;
-    margin-bottom: -5px;
+    margin-bottom: -8px;
 }

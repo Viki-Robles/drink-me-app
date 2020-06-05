@@ -21,7 +21,7 @@ class Team extends Component {
                         teamImage={AaronImg} 
                         linkedIn="https://www.linkedin.com/in/aaronhawthorneproptech/"/>
                     <TeamMember
-                        name="Elena FFS Sacristan"
+                        name="Elena Sacristan"
                         teamImage={ElenaImg}
                         linkedIn="https://www.linkedin.com/in/elena-sacristan-sacristan/"/>
                 </div>
