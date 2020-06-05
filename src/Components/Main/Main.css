@@ -1,6 +1,7 @@
 .Main h2 {
-    margin-left: 20px;
+  margin-left: 20px;
 }
+
 .Main .container {
   margin-left: 10px;
 }
@@ -14,25 +15,25 @@
 
 .Main .container-buttons {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .Main button {
   width: 30%;
   margin-top: 15vh;
   border-radius: 4px;
-  color: #222;
-  background-color: white;
+  color: #B5F23F;
+  background-color: #418AB1;
+  border-color: #418AB1;
   padding: 10px 18px;
   font-size: 12px;
   font-weight: 300;
-  border-color: #1a42b5;
-  box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
-    7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: -7px -7px 30px 0 rgba(255, 255, 255, 0.7),
+    6px 6px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Main button:hover {
-  box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+  box-shadow: inset -7px -7px 20px 0 rgba(53, 5, 54, 0.7),
     inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -49,7 +50,7 @@
   bottom: 0;
   width: 40px;
   height: 40px;
-  background: #3abff5;
+  background: #B9E5E2;
   animation: flying 10s infinite ease-in;
   opacity: 0.5;
   border-radius: 50%;
@@ -77,39 +78,53 @@
 }
 
 @media (min-width: 600px) {
+  .Main {
+    margin-bottom: 40vh;
+    margin-top: 20vh;
+    background-color: white;
+    padding-bottom: 40px;
+    padding-top: 40px;
 
+  }
+
+  /*rgb(116, 226, 133);*/
   .Main h2 {
-        margin-left: 20px;
-    }
-    .Main .container {
+    margin-left: 10px;
+    color: rgb(65, 85, 177);
+    font-size: 60px;
+    font-weight: 500;
+  }
+  .Main .container {
     margin-left: 20px;
+  }
+
+  .Main .container-text {
+    font-weight: 400;
+    font-size: 25px;
   }
 
   .Main .container img {
     width: 20%;
     margin-left: 70%;
     position: absolute;
-    top: 20vh;
+    top: 50vh;
   }
 
   .Main .container-buttons {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 5fr;
   }
 
   .Main button {
-    width: 15%;
-    margin-top: 15vh;
-    margin-left: 30vh;
+    width: 70%;
+    margin-top: 14vh;
+    margin-left: 10vh;
     border-radius: 4px;
-    color: #222;
-    background-color: white;
+    color: #B5F23F;
+    background-color: rgb(65, 85, 177);
     padding: 15px 22px;
-    font-size: 15px;
-    font-weight: 300;
-    border-color: #1a42b5;
-    box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
-      7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: 540;
   }
 
   .Main button:hover {
@@ -117,6 +132,32 @@
       inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
   }
 
+  span {
+    font-family: 'Roboto', sans-serif;;
+    font-weight: 600;
+  }
+
+  span:nth-child(1),
+  :nth-child(2),
+  :nth-child(3),
+  :nth-child(4),
+  :nth-child(5),
+  :nth-child(6),
+  :nth-child(7),
+  :nth-child(8),
+  :nth-child(9),
+  :nth-child(9),
+  :nth-child(10) {
+    font-size: 30px;
+    color: rgb(65, 85, 177);
+  }
+  .container-text p {
+    color:#a9a9a9;
+  }
+
+  span:nth-child(10) {
+    margin-right: 15px;
+  }
   .Main .bubbles {
     position: absolute;
     width: 100%;
@@ -130,7 +171,7 @@
     bottom: 0;
     width: 40px;
     height: 40px;
-    background: #3abff5;
+    background: #B9E5E2;
     animation: flying 10s infinite ease-in;
     opacity: 0.5;
     border-radius: 50%;
@@ -143,6 +184,19 @@
     animation-duration: 8s;
   }
 
+  .Main .bubble:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    left: 20%;
+    animation-duration: 7s;
+  }
+
+  .Main .bubble:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    left: 30%;
+    animation-duration: 6s;
+  }
   @keyframes flying {
     0% {
       bottom: -80px;
