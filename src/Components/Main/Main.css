@@ -33,13 +33,11 @@
   padding: 15px 18px;
   font-size: 15px;
   font-weight: 400;
-  box-shadow: -7px -7px 30px 0 rgba(255, 255, 255, 0.7),
-    6px 6px 30px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: -7px -7px 30px 0 rgba(255, 255, 255, 0.7), 6px 6px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Main button:hover {
-  box-shadow: inset -7px -7px 20px 0 rgba(53, 5, 54, 0.7),
-    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset -7px -7px 20px 0 rgba(53, 5, 54, 0.7), inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Main .bubbles {
@@ -49,6 +47,7 @@
   z-index: 1;
   top: 0;
 }
+
 .Main .bubble {
   position: absolute;
   bottom: 0;
@@ -67,20 +66,11 @@
   animation-duration: 8s;
 }
 
-span:nth-child(1),
-:nth-child(2),
-:nth-child(3),
-:nth-child(4),
-:nth-child(5),
-:nth-child(6),
-:nth-child(7),
-:nth-child(8),
-:nth-child(9),
-:nth-child(9),
-:nth-child(10) {
+span {
   font-size: 20px;
   color: rgb(65, 85, 177);
 }
+
 .container-text p {
   color: #a9a9a9;
 }
@@ -88,6 +78,7 @@ span:nth-child(1),
 span:nth-child(10) {
   margin-right: 15px;
 }
+
 @keyframes flying {
   0% {
     bottom: -80px;
@@ -110,7 +101,6 @@ span:nth-child(10) {
     padding-bottom: 40px;
     padding-top: 40px;
   }
-
   /*rgb(116, 226, 133);*/
   .Main h2 {
     margin-left: 10px;
@@ -121,12 +111,10 @@ span:nth-child(10) {
   .Main .container {
     margin-left: 20px;
   }
-
   .Main .container-text {
     font-weight: 400;
     font-size: 25px;
   }
-
   .Main .container img {
     width: 20%;
     margin-left: 70%;
@@ -135,12 +123,10 @@ span:nth-child(10) {
     z-index: 2;
     overflow: hidden;
   }
-
   .Main .container-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 5fr;
   }
-
   .Main button {
     width: 70%;
     margin-top: 34vh;
@@ -152,35 +138,20 @@ span:nth-child(10) {
     font-size: 20px;
     font-weight: 540;
   }
-
   .Main button:hover {
-    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
-      inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7), inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
   }
-
   span {
     font-family: "Roboto", sans-serif;
     font-weight: 600;
   }
-
-  span:nth-child(1),
-  :nth-child(2),
-  :nth-child(3),
-  :nth-child(4),
-  :nth-child(5),
-  :nth-child(6),
-  :nth-child(7),
-  :nth-child(8),
-  :nth-child(9),
-  :nth-child(9),
-  :nth-child(10) {
+  span:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4), :nth-child(5), :nth-child(6), :nth-child(7), :nth-child(8), :nth-child(9), :nth-child(9), :nth-child(10) {
     font-size: 30px;
     color: rgb(65, 85, 177);
   }
   .container-text p {
     color: #a9a9a9;
   }
-
   span:nth-child(10) {
     margin-right: 15px;
   }
@@ -201,21 +172,18 @@ span:nth-child(10) {
     opacity: 0.5;
     border-radius: 50%;
   }
-
   .Main .bubble:nth-child(1) {
     width: 40px;
     height: 40px;
     left: 10%;
     animation-duration: 8s;
   }
-
   .Main .bubble:nth-child(2) {
     width: 40px;
     height: 40px;
     left: 20%;
     animation-duration: 7s;
   }
-
   .Main .bubble:nth-child(3) {
     width: 40px;
     height: 40px;

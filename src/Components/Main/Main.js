@@ -34,16 +34,7 @@ export default function Main() {
           </div>
           <div className="container-text">
             <p>
-              <span>D</span>
-              <span>r</span>
-              <span>i</span>
-              <span>n</span>
-              <span>k</span>
-              <span>M</span>
-              <span>e</span>
-              <span>A</span>
-              <span>p</span>
-              <span>p</span>
+              <span>DrinkMeApp</span>
               is an application where you can be creative at home and experiment
               <br />
               by exploring the different type of coctails and drinks that are
@@ -54,25 +45,20 @@ export default function Main() {
           <div className="container-buttons">
             <p>Select and ingredient from the drop down menu</p>
 
-            <form>
-              <select
-                onChange={(e) => setIngredient(e.target.value)}
-                value={ingredient}
-              >
-                {listIngredients.map((drink) => (
-                  <option key={drink.strIngredient1}>
-                    {drink.strIngredient1}
-                  </option>
-                ))}
-              </select>
-            </form>
-
-            <Results ingredient={ingredient} />
-
             <button>Feeling lucky</button>
             <img src={martini} alt="martini" />
           </div>
         </div>
+        <form>
+          <select onChange={(e) => setIngredient(e.target.value)}>
+            {listIngredients.map((drink) => (
+              <option key={drink.strIngredient1} value={drink.strIngredient1}>
+                {drink.strIngredient1}
+              </option>
+            ))}
+          </select>
+        </form>
+        <Results ingredient={ingredient} />
       </div>
     );
   }
