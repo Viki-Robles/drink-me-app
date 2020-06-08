@@ -9,7 +9,7 @@ export default function Results(props) {
 
   useEffect(() => {
     fetch(
-      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${props.ingredient}}`
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${props.ingredient}`
     )
       .then((response) => response.json())
       .then((json) => {
@@ -24,7 +24,7 @@ export default function Results(props) {
   } else {
     return (
       <div className="Results">
-        {/* <div className="results-header">Fancy any of these?</div> */}
+        <div className="results-header">Fancy any of these?</div>
         <div className="results-container">
           {drinks.map((drink) => (
             <div key={drink.idDrink}>
