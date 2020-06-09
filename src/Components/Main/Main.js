@@ -58,7 +58,7 @@ export default function Main() {
             ))}
           </select>
         </form>
-        <Results ingredient={ingredient} />
+        {ingredient && <Results ingredient={ingredient} />}
       </div>
     );
   }
