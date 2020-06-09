@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import martini from "./images/martini.png";
 import "./Main.css";
 import Results from "../Results/Results.js";
+import RandomResults from "../Random/RandomResults";
 
 export default function Main() {
   const [listIngredients, setListIngredients] = useState([]);
   const [ingredient, setIngredient] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
+  const [buttonOn, setButtonOn] = useState(false);
+
 
   useEffect(() => {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list")
@@ -16,6 +19,8 @@ export default function Main() {
         setIsLoaded(true);
       });
   }, []);
+
+  
 
   if (!isLoaded) {
     return <div>Loadin Main...</div>;
@@ -44,8 +49,9 @@ export default function Main() {
           </div>
           <div className="container-buttons">
             <p>Select and ingredient from the drop down menu</p>
-
-            <button>Feeling lucky</button>
+            <button onClick={() => setButtonOn(!buttonOn) ? <RandomResults/>:""}>
+              Feeling lucky
+            </button>
             <img src={martini} alt="martini" />
           </div>
         </div>
