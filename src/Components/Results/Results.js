@@ -9,7 +9,7 @@ export default function Results(props) {
 
   useEffect(() => {
     fetch(
-      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${props.ingredient}}`
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${props.ingredient}`
     )
       .then((response) => response.json())
       .then((json) => {
