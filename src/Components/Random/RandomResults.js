@@ -12,6 +12,7 @@ export default function RandomResults() {
             .then((json) => {
                 setRandom(json.drinks);
                 setIsLoaded(true);
+                console.log("hello");
             });
     }, []);
 
@@ -22,10 +23,13 @@ export default function RandomResults() {
             <div>
                 {
                     listRandom.map((drink) => (
+                        <div key={drink.idDrink}>
+                            <img src={drink.strDrinkThumb}/>
                         <Random
-                            key={drink.idDrink}
                             name={drink.strDrink}
                             picure={drink.strDrinkThumb} />
+                        </div>
+                        
                     ))
                 }
             </div>

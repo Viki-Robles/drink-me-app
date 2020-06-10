@@ -208,6 +208,10 @@
     } */
     
     /* .NavBar-button {
+    .NavBar {
+        width: 80%;
+    }
+    .NavBar-button {
          display: none;  
     }
     .NavBar-box {
@@ -234,3 +238,9 @@
        }
 
 } */ 
+    .NavBar-logo {
+        font-size: 25px;
+        color: white;
+    }
+
+}
