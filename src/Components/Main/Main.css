@@ -16,8 +16,6 @@
 
 .Main .container img {
   width: 60%;
-  margin-left: 40%;
-  position: absolute;
 }
 
 .Main .container-buttons {
@@ -33,17 +31,19 @@
   padding: 15px 18px;
   font-size: 15px;
   font-weight: 400;
-  box-shadow: -7px -7px 30px 0 rgba(255, 255, 255, 0.7), 6px 6px 30px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: -7px -7px 30px 0 rgba(255, 255, 255, 0.7),
+    6px 6px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Main button:hover {
-  box-shadow: inset -7px -7px 20px 0 rgba(53, 5, 54, 0.7), inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset -7px -7px 20px 0 rgba(53, 5, 54, 0.7),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Main .bubbles {
   position: absolute;
-  /* width: 100%;
-  height: 100%; */
+  width: 100%;
+  height: 100%;
   z-index: 1;
   top: 0;
 }
@@ -62,7 +62,7 @@
 .Main .bubble:nth-child(1) {
   width: 40px;
   height: 40px;
-  left: 10%;
+  right: 10%;
   animation-duration: 8s;
 }
 
@@ -116,49 +116,89 @@ span:nth-child(10) {
     font-size: 25px;
   }
   .Main .container img {
-    width: 20%;
-    margin-left: 70%;
-    position: absolute;
+    width: 40%;
     top: 60vh;
-    z-index: 2;
-    overflow: hidden;
+    margin-left: 30%;
   }
-  .Main .container-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 5fr;
-  }
-  .Main button {
-    width: 70%;
-    margin-top: 34vh;
-    margin-left: 10vh;
-    border-radius: 4px;
-    color: white;
-    background-color: rgb(65, 85, 177);
-    padding: 15px 22px;
-    font-size: 20px;
-    font-weight: 540;
-  }
-  .Main button:hover {
-    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7), inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
-  }
+
   span {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-  }
-  span:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4), :nth-child(5), :nth-child(6), :nth-child(7), :nth-child(8), :nth-child(9), :nth-child(9), :nth-child(10) {
     font-size: 30px;
     color: rgb(65, 85, 177);
+    margin-right: 20px;
+  }
+
+
+  span:nth-child(10) {
+    margin-right: 15px;
+  }
+
+  .container-logo {
+    font-family: 'Lobster Two', cursive;
+    font-weight: bold;
   }
   .container-text p {
     color: #a9a9a9;
   }
-  span:nth-child(10) {
-    margin-right: 15px;
+
+  .container-p {
+    color: #a9a9a9;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 40px;
+    color: rgb(65, 85, 177);
   }
-  .Main .bubbles {
-    /* position: absolute;
+
+  .Main .container-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .Main .container-buttons-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .Main .container-select {
+    padding: 15px 22px;
+    background-color: rgb(65, 85, 177);
+    width: 70%;
+    border-radius: 4px;
+    color: white;
+    font-size: 20px;
+    font-weight: 540;
+    box-shadow: -10px -10px 20px 0 rgba(255, 255, 255, 0.7),
+    10px 17px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+  .Main .container-form {
+    margin-top: 25vh;
+  }
+
+  .Main .container-select:hover {
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+      inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+  .Main button {
+    margin-top: 25vh;
+    width: 70%;
+    border-radius: 4px solid transparent;
+    color: white;
+    background-color: #21B6A8;
+    padding: 15px 22px;
+    font-size: 20px;
+    font-weight: 540;
+    box-shadow: -10px -10px 20px 0 rgba(255, 255, 255, 0.7),
+    10px 17px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .Main button:hover {
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+      inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+ .Main .bubbles {
+   position: absolute;
     width: 100%;
-    height: 100%; */
+    height: 100%;
     z-index: 1;
     top: 0;
   }
@@ -175,19 +215,19 @@ span:nth-child(10) {
   .Main .bubble:nth-child(1) {
     width: 40px;
     height: 40px;
-    left: 10%;
+    right: 10%;
     animation-duration: 8s;
   }
   .Main .bubble:nth-child(2) {
     width: 40px;
     height: 40px;
-    left: 20%;
+    right: 20%;
     animation-duration: 7s;
   }
   .Main .bubble:nth-child(3) {
     width: 40px;
     height: 40px;
-    left: 30%;
+    right: 30%;
     animation-duration: 6s;
   }
   @keyframes flying {

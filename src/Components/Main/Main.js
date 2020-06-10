@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import martini from "./images/martini.png";
 import "./Main.css";
 import Results from "../Results/Results.js";
-import RandomResults from "../Random/RandomResults";
 
 export default function Main() {
   const [listIngredients, setListIngredients] = useState([]);
   const [ingredient, setIngredient] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
   const [buttonOn, setButtonOn] = useState(false);
-
+  const [listRandom, setRandom] = useState([]);
 
   useEffect(() => {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list")
@@ -20,7 +19,13 @@ export default function Main() {
       });
   }, []);
 
-  
+  const fetchRandomData = () => {
+    fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+      .then((response) => response.json())
+      .then((json) => {
+        setRandom(json.drinks)
+      });
+  }
 
   if (!isLoaded) {
     return <div>Loadin Main...</div>;
@@ -34,36 +39,56 @@ export default function Main() {
             <div className="bubble"></div>
             <div className="bubble"></div>
             <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
           </div>
           <div className="container-text">
             <p>
-              <span>DrinkMeApp</span>
-              is an application where you can be creative at home and experiment
+              <span className="container-logo">DrinkMeApp</span>
+              is an application where you can be creative at home on your own space and experiment
               <br />
-              by exploring the different type of coctails and drinks that are
-              available on our "DYI" guide.
+              the different type of coctails and drinks that are
+              available on our "DYI" recipe guide.
               <br />
             </p>
           </div>
+          <p className="container-p">Please select a drink from the drop-down menu.</p>
           <div className="container-buttons">
-            <p>Select and ingredient from the drop down menu</p>
-            <button onClick={() => setButtonOn(!buttonOn) ? <RandomResults/>:""}>
-              Feeling lucky
-            </button>
-            <img src={martini} alt="martini" />
+
+            <div className="container-buttons-boxes">
+              <div>
+                <button className="button-random"
+                  onClick={() => fetchRandomData(!buttonOn)}>Feeling lucky
+                </button>
+                <div className="random-container">
+                  {
+                    listRandom.map((drink) => (
+                      <div key={drink.idDrink}>
+                        <p className="random-container-p">Fancy any of these?</p>
+                        <div className="random-container-picture">
+                          <div className="random-container-title">{drink.strDrink}</div>
+                          <img src={drink.strDrinkThumb} />
+                        </div>
+                      </div>
+                    ))
+                  }
+                </div>
+              </div>
+              <form className="container-form">
+                <select onChange={(e) => setIngredient(e.target.value)} className="container-select">
+                  {listIngredients.map((drink) => (
+                    <option key={drink.strIngredient1} value={drink.strIngredient1}>
+                      {drink.strIngredient1}
+                    </option>
+                  ))}
+                </select>
+              </form>
+            </div>
+
+            <div className="main-picture-container">
+              <img src={martini} alt="martini" />
+            </div>
+
           </div>
         </div>
-        <form>
-          <select onChange={(e) => setIngredient(e.target.value)}>
-            {listIngredients.map((drink) => (
-              <option key={drink.strIngredient1} value={drink.strIngredient1}>
-                {drink.strIngredient1}
-              </option>
-            ))}
-          </select>
-        </form>
         {ingredient && <Results ingredient={ingredient} />}
       </div>
     );
