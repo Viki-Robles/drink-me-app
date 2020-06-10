@@ -70,9 +70,9 @@
 }
 
 @media (min-width: 600px) { 
-    /* .NavBar {
-        width: 100%;
-    } */
+    .NavBar {
+        width: 80%;
+    }
     .NavBar-button {
          display: none;  
     }
@@ -98,5 +98,10 @@
         display: flex;
         flex-direction: row;
        }
+
+    .NavBar-logo {
+        font-size: 25px;
+        color: white;
+    }
 
 }
