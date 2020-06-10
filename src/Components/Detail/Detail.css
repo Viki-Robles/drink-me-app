@@ -1,0 +1,164 @@
+.Detail {
+  width: 90%;
+  margin: auto;
+}
+.Detail h1 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.Detail h2 {
+  margin: 0px;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.Detail p {
+  margin-bottom: 0px;
+  color: black;
+  font-size: 1rem;
+}
+
+.Detail-instructions {
+  padding-bottom: 50px;
+  color: black;
+  width: 80%;
+  margin: auto;
+}
+
+.Detail img {
+  width: 450px;
+  box-shadow: 1px 1px 7px #777;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 3px -3px 3px 10px #7ab9cc;
+}
+
+.Detail-img-ingredients {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+}
+
+.Detail-img {
+  position: relative;
+  margin: auto;
+}
+
+div.Detail-alcohol,
+div.Detail-glass {
+  position: absolute;
+  padding: 2%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+
+.Detail-alcohol p {
+  font-size: 0.8rem;
+}
+
+.Detail-alcohol {
+  left: -30px;
+  top: 35px;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  box-shadow: 3px -3px 3px 10px rgb(65, 85, 177);
+}
+
+.Detail-glass {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-15deg);
+  left: 30px;
+  top: -60px;
+  z-index: 1;
+
+  box-shadow: 3px -3px 3px 10px #21B6A8;
+}
+
+.Detail-icon-cockatil {
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  color:#4155b1;
+
+}
+.Detail-icon-heart {
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  color:#fd3b5f;
+}
+
+.Detail-ingredients-measures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  font-size: 1rem;
+  justify-items: center;
+}
+
+
+
+@media (max-width: 1200px) {
+  .Detail-img-ingredients {
+    grid-template-columns: 1fr;
+  }
+  .Detail-instructions {
+    padding-bottom: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Detail img {
+    width: 250px;
+  }
+  .Detail-img-ingredients {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 100px;
+  }
+  .Detail-img {
+    padding-bottom: 80px;
+  }
+  .Detail-img img {
+    margin: auto;
+  }
+  .Detail p {
+    font-size: 0.8rem;
+  }
+  .Detail-ingredients-measures {
+    grid-gap: 15px;
+  }
+  .Detail-instructions {
+    width: 100%;
+  }
+
+  div.Detail-alcohol {
+    font-size: 0.7rem;
+    left: -15px;
+    top: -55px;
+  }
+
+  div.Detail-glass {
+    left: 60px;
+    top: -100px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .Detail p {
+    font-size: 0.7rem;
+  }
+}
