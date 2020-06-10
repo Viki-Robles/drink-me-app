@@ -38,13 +38,11 @@ export default function Main() {
             <div className="bubble"></div>
             <div className="bubble"></div>
             <div className="bubble"></div>
-            <div className="bubble"></div>
           </div>
           <div className="container-text">
             <p>
               <span className="container-logo">DrinkMeApp</span>
               is an application where you can be creative at home on your own space and experiment
-              <br />
               the different type of coctails and drinks that are
               available on our "DYI" recipe guide.
               <br />
