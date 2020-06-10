@@ -21,8 +21,9 @@ function NavBarButton({ onButtonSwitched }) {
 }
 function NavBarBox({ isOpen }) {
   return (
+    
     <div className="NavBar-logo-menu">
-      <div className="NavBar-logo">DrinkMeApp</div>
+      {/* <div className="NavBar-logo">DrinkMeApp</div> */}
           <div className={`NavBar-box ${isOpen ? "is-open" : ""}`}>
         <div className="NavBar-box-link">Home</div>
         <div className="NavBar-box-link">Team</div>
