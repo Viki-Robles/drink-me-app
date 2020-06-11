@@ -8,7 +8,7 @@ import TeamMember from '../../TeamMember/TeamMember';
 class Team extends Component {
     render() {
         return (
-            <div className="Team">
+            <div className="Team" id="Team">
                 <h3>The</h3>
                 <h2>Team</h2>
                 <div className="row">

@@ -31,11 +31,10 @@ export default function Main() {
     return <div>Loadin Main...</div>;
   } else {
     return (
-      <div className="Main">
+      <div className="Main" id="Home">
         <div className="container">
           <h2>Let's do some Chemistry together..</h2>
           <div className="bubbles">
-            <div className="bubble"></div>
             <div className="bubble"></div>
             <div className="bubble"></div>
             <div className="bubble"></div>
@@ -44,7 +43,6 @@ export default function Main() {
             <p>
               <span className="container-logo">DrinkMeApp</span>
               is an application where you can be creative at home on your own space and experiment
-              <br />
               the different type of coctails and drinks that are
               available on our "DYI" recipe guide.
               <br />

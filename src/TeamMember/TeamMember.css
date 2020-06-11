@@ -6,3 +6,10 @@
 .TeamMember a {
     text-decoration: none;
 }
+
+.teamMemberName {
+    color:rgb(65, 85, 177);
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 20px;
+}

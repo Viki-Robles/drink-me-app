@@ -5,17 +5,21 @@
   padding-bottom: 40px;
 }
 
+.Main .container {
+  margin-top: 40px;
+}
+
 .Main h2 {
   margin-left: 5px;
   margin-bottom: 10vh;
+  color: rgb(65, 85, 177);
+  font-size: 25px;
+  font-weight: 500;
 }
-
-.Main .container {
-  margin-left: 10px;
-}
-
 .Main .container img {
-  width: 60%;
+  width: 100%;
+  margin-left: 10px;
+  margin-top: 50px;
 }
 
 .Main .container-buttons {
@@ -23,13 +27,13 @@
 }
 
 .Main button {
-  width: 30%;
+  border: none;
   margin-top: 15vh;
   border-radius: 4px;
   color: white;
   background-color: rgb(65, 85, 177);
-  padding: 15px 18px;
-  font-size: 15px;
+  padding: 10px 20px;
+  font-size: 17px;
   font-weight: 400;
   box-shadow: -7px -7px 30px 0 rgba(255, 255, 255, 0.7),
     6px 6px 30px 0 rgba(0, 0, 0, 0.2);
@@ -40,15 +44,15 @@
     inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-.Main .bubbles {
+/* .Main .bubbles {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
   top: 0;
-}
+} */
 
-.Main .bubble {
+/* .Main .bubble {
   position: absolute;
   bottom: 0;
   width: 40px;
@@ -57,29 +61,28 @@
   animation: flying 10s infinite ease-in;
   opacity: 0.5;
   border-radius: 50%;
-}
+} */
 
-.Main .bubble:nth-child(1) {
+/* .Main .bubble:nth-child(1) {
   width: 40px;
   height: 40px;
   right: 10%;
   animation-duration: 8s;
-}
+} */
 
 span {
   font-size: 20px;
   color: rgb(65, 85, 177);
+  margin-right: 15px;
+  font-weight: 600;
 }
 
 .container-text p {
   color: #a9a9a9;
 }
 
-span:nth-child(10) {
-  margin-right: 15px;
-}
 
-@keyframes flying {
+/* @keyframes flying {
   0% {
     bottom: -80px;
     transform: translateX(0);
@@ -91,7 +94,8 @@ span:nth-child(10) {
     bottom: 1080px;
     transform: translateX(-200px);
   }
-}
+} */
+
 
 @media (min-width: 600px) {
   .Main {
@@ -125,6 +129,7 @@ span:nth-child(10) {
     font-size: 30px;
     color: rgb(65, 85, 177);
     margin-right: 20px;
+    font-weight: 600;
   }
 
 
@@ -133,16 +138,15 @@ span:nth-child(10) {
   }
 
   .container-logo {
-    font-family: 'Lobster Two', cursive;
     font-weight: bold;
   }
   .container-text p {
     color: #a9a9a9;
   }
 
-  .container-p {
+  .Main .container-p {
     color: #a9a9a9;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
     margin-top: 40px;
     color: rgb(65, 85, 177);
@@ -159,6 +163,7 @@ span:nth-child(10) {
   }
 
   .Main .container-select {
+    border: none;
     padding: 15px 22px;
     background-color: rgb(65, 85, 177);
     width: 70%;
@@ -180,6 +185,7 @@ span:nth-child(10) {
   .Main button {
     margin-top: 25vh;
     width: 70%;
+    border: none;
     border-radius: 4px solid transparent;
     color: white;
     background-color: #21B6A8;
@@ -195,20 +201,22 @@ span:nth-child(10) {
       inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
   }
 
- .Main .bubbles {
+ /* .Main .bubbles {
    position: absolute;
+ .Main .bubbles {
+    position: relative;
     width: 100%;
     height: 100%;
     z-index: 1;
     top: 0;
-  }
-  .bubble {
+  } */
+  /* .bubble {
     position: absolute;
     bottom: 0;
     width: 40px;
     height: 40px;
     background: #b9e5e2;
-    animation: flying 10s infinite ease-in;
+    animation: flying 10s infinite;
     opacity: 0.5;
     border-radius: 50%;
   }
@@ -217,8 +225,8 @@ span:nth-child(10) {
     height: 40px;
     right: 10%;
     animation-duration: 8s;
-  }
-  .Main .bubble:nth-child(2) {
+  } */
+  /* .Main .bubble:nth-child(2) {
     width: 40px;
     height: 40px;
     right: 20%;
@@ -229,8 +237,8 @@ span:nth-child(10) {
     height: 40px;
     right: 30%;
     animation-duration: 6s;
-  }
-  @keyframes flying {
+  } */
+  /* @keyframes flying {
     0% {
       bottom: -80px;
       transform: translateX(0);
@@ -241,6 +249,6 @@ span:nth-child(10) {
     100% {
       bottom: 1080px;
       transform: translateX(-200px);
-    }
-  }
+    } */
+  
 }
