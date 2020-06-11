@@ -1,6 +1,5 @@
 .Results {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 5%, #bcfdb6 20%, #7a8bd6 100%);
-    /* padding-bottom: 80px; */
+    padding-top: 100px;
 }
 
 .results-header {
@@ -15,5 +14,6 @@
     padding: 5%;
     display: grid;
     grid-gap: 50px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    justify-items: center;
 }

@@ -24,7 +24,7 @@ export default function Results(props) {
   } else {
     return (
       <div className="Results">
-        <div className="results-header">Fancy any of these?</div>
+        <div className="results-header">{drinks.length > 1 ? 'Fancy any of these?' : 'Fancy any of this one?'}</div>
         <div className="results-container">
           {drinks.map((drink) => (
             <div key={drink.idDrink}>
