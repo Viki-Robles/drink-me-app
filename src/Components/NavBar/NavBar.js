@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./NavBar.css";
 import { FaAlignJustify } from "react-icons/fa";
+import { Link } from 'react-scroll';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="NavBar">
+      <div className="NavBar-logo">DrinkMeApp</div>
       <NavBarButton onButtonSwitched={() => setIsOpen(!isOpen)} />
       <NavBarBox isOpen={isOpen} />
     </div>
@@ -14,21 +16,39 @@ export default function NavBar() {
 
 function NavBarButton({ onButtonSwitched }) {
   return (
-      <button className="NavBar-button" onClick={() => onButtonSwitched()}>
-        <FaAlignJustify className="NavBar-hamburguer" />
-      </button>
+    <button className="NavBar-button" onClick={() => onButtonSwitched()}>
+      <FaAlignJustify className="NavBar-hamburguer" />
+    </button>
   );
 }
 function NavBarBox({ isOpen }) {
   return (
-    
     <div className="NavBar-logo-menu">
-      {/* <div className="NavBar-logo">DrinkMeApp</div> */}
-          <div className={`NavBar-box ${isOpen ? "is-open" : ""}`}>
-        <div className="NavBar-box-link">Home</div>
-        <div className="NavBar-box-link">Team</div>
-        <div className="NavBar-box-link">Contact</div>
-        <div className="NavBar-box-link">Random</div>
+      <div className={`NavBar-box ${isOpen ? "is-open" : ""}`}>
+      <Link
+          className="NavBar-box-link"
+          to="Home"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >Home</Link>
+        <Link
+          className="NavBar-box-link"
+          to="Team"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >Team</Link>
+        <Link
+          className="NavBar-box-link"
+          to="Contact"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >Contact</Link>
       </div>
     </div>
   );

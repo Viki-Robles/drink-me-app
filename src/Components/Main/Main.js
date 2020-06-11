@@ -31,7 +31,7 @@ export default function Main() {
     return <div>Loadin Main...</div>;
   } else {
     return (
-      <div className="Main">
+      <div className="Main" id="Home">
         <div className="container">
           <h2>Let's do some Chemistry together..</h2>
           <div className="bubbles">
