@@ -1,27 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Detail.css";
-import { FaCocktail, FaHeartbeat } from "react-icons/fa";
+import { FaCocktail, FaHeartbeat, FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Detail({ match }) {
   const [drink, setDrink] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  const ingredientsIndexes = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-  ];
 
   useEffect(() => {
     fetch(
@@ -39,20 +23,15 @@ export default function Detail({ match }) {
   } else {
     return (
       <div className="Detail">
-        <h1>{drink.strDrink}</h1>
-        <p className="Detail-instructions">
-          {drink.strInstructions.split(".").map(
-            (instruction, index) =>
-              instruction && (
-                <p key={instruction}>
-                  {index + 1}- {instruction}
-                </p>
-              )
-          )}
-        </p>
+        <div className="Detail-back-button">
+          <Link to="/">
+            <FaArrowLeft className="icon-back" /> Keep searching
+          </Link>
+        </div>
 
-        <div className="Detail-img-ingredients">
-          <div className="Detail-img">
+        <div className="Detail-title-photo">
+          <h1>{drink.strDrink}</h1>
+          <div className="Detail-photo">
             <img src={drink.strDrinkThumb} alt={drink.strDrink} />
             <div className="Detail-alcohol">
               {drink.strAlcoholic === "Alcoholic" ? (
@@ -65,16 +44,45 @@ export default function Detail({ match }) {
             </div>
             <div className="Detail-glass">Serve in {drink.strGlass}</div>
           </div>
+        </div>
+
+        <div className="Detail-instructions-ingredients">
+          <div className="Detail-instructions">
+            <div className="Detail-instructions-wrapper">
+              <h3>Instructions:</h3>
+              {drink.strInstructions.split(".").map(
+                (instruction, index) =>
+                  instruction && instruction !== " " && (
+                    <p key={instruction}>
+                      <span className="Detail-order">{index + 1}.</span>{" "}
+                      {instruction}
+                    </p>
+                  )
+              )}
+            </div>
+          </div>
           <div className="Detail-ingredients">
-            <h2>Ingredients</h2>
-            {ingredientsIndexes.map((ingredient) => {
-              return (
-                <div className="Detail-ingredients-measures" key={ingredient}>
-                  <p>{`drink.strMeasure${ingredient}`}:</p>
-                  <p>{`drink.strIngredient${ingredient}`}</p>
+            <div className="Detail-ingredients-wrapper">
+              <h3>Ingredients</h3>
+              <div className="Detail-ingredients-measures">
+                <div className="Detail-measures-list">
+                  {Object.keys(drink)
+                    .filter((key) => key.includes("strMeasure") && drink[key])
+                    .map((key) => (
+                      <p key={key}>{drink[key]}</p>
+                    ))}
                 </div>
-              );
-            })}
+                <div className="Detail-ingredients-list">
+                  {Object.keys(drink)
+                    .filter(
+                      (key) => key.includes("strIngredient") && drink[key]
+                    )
+                    .map((key) => (
+                      <p key={key}>{drink[key]}</p>
+                    ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
