@@ -4,7 +4,7 @@
   border-radius: 35%;
   box-shadow: 2px 2px 3px #000;
   overflow: hidden;
-  max-width: 250px;
+  max-width: 230px;
 }
 
 .Drink .drink-container:hover {
@@ -20,7 +20,7 @@
 
 .Drink .overlay-title h3 {
   font-family: "Shadows Into Light", cursive;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: white;
   text-shadow: 1px 1px 1px black;
   background-color: black;
@@ -35,4 +35,13 @@
 .Drink img {
   width: 100%;
   margin-bottom: -8px;
+}
+
+@media (max-width: 700px) {
+  .Drink .drink-container {
+    max-width: 180px;
+  }
+  .Drink .overlay-title h3 {
+    font-size: 0.7rem;
+  }
 }

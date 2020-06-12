@@ -35,7 +35,7 @@ export default function Detail({ match }) {
             <img src={drink.strDrinkThumb} alt={drink.strDrink} />
             <div className="Detail-alcohol">
               {drink.strAlcoholic === "Alcoholic" ? (
-                <FaCocktail className="Detail-icon-cockatil" />
+                <FaCocktail className="Detail-icon-cocktail" />
               ) : (
                 <FaHeartbeat className="Detail-icon-heart" />
               )}
@@ -50,7 +50,7 @@ export default function Detail({ match }) {
           <div className="Detail-instructions">
             <div className="Detail-instructions-wrapper">
               <h3>Instructions:</h3>
-              {drink.strInstructions.split(".").map(
+              {drink.strInstructions.split(". ").map(
                 (instruction, index) =>
                   instruction && instruction !== " " && (
                     <p key={instruction}>
