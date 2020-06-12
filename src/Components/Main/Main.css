@@ -1,8 +1,6 @@
 .Main {
-  margin-bottom: 40vh;
   margin-top: 10vh;
   background-color: white;
-  padding-bottom: 40px;
 }
 
 .Main .container {
@@ -13,7 +11,7 @@
   margin-left: 5px;
   margin-bottom: 10vh;
   color: rgb(65, 85, 177);
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 500;
 }
 .Main .container img {
@@ -26,6 +24,34 @@
   display: grid;
 }
 
+.Main .container-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Main .container-buttons-boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+.Main .container-select {
+  border: none;
+  padding: 10px 20px;
+  background-color: rgb(65, 85, 177);
+  width: 90%;
+  border-radius: 4px;
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+  box-shadow: -10px -10px 20px 0 rgba(255, 255, 255, 0.7),
+  10px 17px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Main .container-select:hover {
+  box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
+    inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
 .Main button {
   border: none;
   margin-top: 15vh;
@@ -44,31 +70,14 @@
     inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* .Main .bubbles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  top: 0;
-} */
+.Main .container-p {
+  color: #a9a9a9;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 40px;
+  color: rgb(65, 85, 177);
+}
 
-/* .Main .bubble {
-  position: absolute;
-  bottom: 0;
-  width: 40px;
-  height: 40px;
-  background: #b9e5e2;
-  animation: flying 10s infinite ease-in;
-  opacity: 0.5;
-  border-radius: 50%;
-} */
-
-/* .Main .bubble:nth-child(1) {
-  width: 40px;
-  height: 40px;
-  right: 10%;
-  animation-duration: 8s;
-} */
 
 span {
   font-size: 20px;
@@ -81,21 +90,58 @@ span {
   color: #a9a9a9;
 }
 
-
-/* @keyframes flying {
-  0% {
-    bottom: -80px;
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(100px);
-  }
-  100% {
-    bottom: 1080px;
-    transform: translateX(-200px);
-  }
-} */
-
+.Main .bubbles {
+  position: absolute;
+}
+.Main .bubbles {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   top: 0;
+ } 
+.bubble {
+   position: absolute;
+   bottom: 0;
+   width: 40px;
+   height: 40px;
+   background: #b9e5e2;
+   animation: flying 10s infinite;
+   opacity: 0.5;
+   border-radius: 50%;
+ }
+ .Main .bubble:nth-child(1) {
+   width: 40px;
+   height: 40px;
+   right: 10%;
+   animation-duration: 8s;
+ } 
+ .Main .bubble:nth-child(2) {
+   width: 40px;
+   height: 40px;
+   right: 20%;
+   animation-duration: 7s;
+ }
+ .Main .bubble:nth-child(3) {
+   width: 40px;
+   height: 40px;
+   right: 30%;
+   animation-duration: 6s;
+ } 
+  @keyframes flying {
+   0% {
+     bottom: -80px;
+     transform: translateX(0);
+   }
+   50% {
+     transform: translateX(100px);
+   }
+   100% {
+     bottom: 1080px;
+     transform: translateX(-200px);
+   }
+ 
+}
 
 @media (min-width: 600px) {
   .Main {
@@ -105,7 +151,7 @@ span {
     padding-bottom: 40px;
     padding-top: 40px;
   }
-  /*rgb(116, 226, 133);*/
+
   .Main h2 {
     margin-left: 10px;
     color: rgb(65, 85, 177);
@@ -127,7 +173,7 @@ span {
 
   span {
     font-size: 30px;
-    color: #FF8300;
+    color: rgb(65, 85, 177);
     margin-right: 20px;
     font-weight: 600;
   }
@@ -175,7 +221,7 @@ span {
     10px 17px 20px 0 rgba(0, 0, 0, 0.2);
   }
   .Main .container-form {
-    margin-top: 25vh;
+    margin-top: 15vh;
   }
 
   .Main .container-select:hover {
@@ -183,7 +229,6 @@ span {
       inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
   }
   .Main button {
-    margin-top: 25vh;
     width: 70%;
     border: none;
     border-radius: 4px solid transparent;
@@ -201,16 +246,17 @@ span {
       inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
   }
 
- /* .Main .bubbles {
+ .Main .bubbles {
    position: absolute;
+ }
  .Main .bubbles {
     position: relative;
     width: 100%;
     height: 100%;
     z-index: 1;
     top: 0;
-  } */
-  /* .bubble {
+  } 
+.bubble {
     position: absolute;
     bottom: 0;
     width: 40px;
@@ -225,8 +271,8 @@ span {
     height: 40px;
     right: 10%;
     animation-duration: 8s;
-  } */
-  /* .Main .bubble:nth-child(2) {
+  } 
+  .Main .bubble:nth-child(2) {
     width: 40px;
     height: 40px;
     right: 20%;
@@ -237,8 +283,8 @@ span {
     height: 40px;
     right: 30%;
     animation-duration: 6s;
-  } */
-  /* @keyframes flying {
+  } 
+   @keyframes flying {
     0% {
       bottom: -80px;
       transform: translateX(0);
@@ -249,6 +295,7 @@ span {
     100% {
       bottom: 1080px;
       transform: translateX(-200px);
-    } */
+    }
   
+}
 }
