@@ -24,10 +24,13 @@ export default function Results(props) {
   } else {
     return (
       <div className="Results">
-        <div className="results-header">{drinks.length > 1 ? 'Fancy any of these?' : 'Fancy any of this one?'}</div>
+        <div className="results-header">
+          {drinks.length > 1 ? "Fancy any of these?" : "Fancy any of this one?"}
+        </div>
         <div className="results-container">
           {drinks.map((drink) => (
             <div key={drink.idDrink}>
+              {drink.idDrink !== 17246 && (
                 <Link to={`/drink/${drink.idDrink}`}>
                   <Drink
                     id={drink.idDrink}
@@ -35,6 +38,7 @@ export default function Results(props) {
                     image={drink.strDrinkThumb}
                   />
                 </Link>
+              )}
             </div>
           ))}
         </div>
