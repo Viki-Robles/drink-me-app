@@ -60,7 +60,7 @@ export default function Main() {
                   {
                     listRandom.map((drink) => (
                       <div key={drink.idDrink}>
-                        <p className="random-container-p">Fancy any of these?</p>
+                        <p className="random-container-p">Checkout this one!</p>
                         <div className="random-container-picture">
                           <div className="random-container-title">{drink.strDrink}</div>
                           <img src={drink.strDrinkThumb} />
