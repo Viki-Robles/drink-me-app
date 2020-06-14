@@ -1,5 +1,6 @@
 .NavBar {
     position: fixed;
+    top:0;
     z-index: 1;
     width: 81%;
     background-color: rgb(65, 85, 177);
