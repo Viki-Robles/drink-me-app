@@ -15,9 +15,8 @@
   font-weight: 500;
 }
 .Main .container img {
-  width: 100%;
-  margin-left: 10px;
-  margin-top: 50px;
+  width: 60%;
+  margin-bottom: 20px;
 }
 
 .Main .container-buttons {
@@ -26,7 +25,7 @@
 
 .Main .container-buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .Main .container-buttons-boxes {
@@ -37,9 +36,9 @@
 
 .Main .container-select {
   border: none;
-  padding: 10px 20px;
-  background-color: rgb(65, 85, 177);
-  width: 90%;
+  padding: 10px;
+  background-color: #21B6A8;
+  width: 100%;
   border-radius: 4px;
   color: white;
   font-size: 17px;
@@ -53,12 +52,13 @@
     inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
 }
 .Main button {
+  width: 100%;
   border: none;
-  margin-top: 15vh;
+  margin-bottom: 10px;
   border-radius: 4px;
   color: white;
   background-color: rgb(65, 85, 177);
-  padding: 10px 20px;
+  padding: 10px;
   font-size: 17px;
   font-weight: 400;
   box-shadow: -7px -7px 30px 0 rgba(255, 255, 255, 0.7),
@@ -143,6 +143,40 @@ span {
  
 }
 
+.random-container-p {
+  margin-top: 40px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2rem;
+  color: rgb(65, 85, 177);
+  margin-bottom: 25px;
+}
+
+.random-container-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color:rgba(104, 99, 99, 0.822);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1rem;
+
+}
+
+.random-container-picture {
+  text-align: center;
+}
+
+.Main .random-container img {
+  width: 80%;
+  border-radius: 6px;
+}
+
+a {
+  text-decoration: none;
+}
+
 @media (min-width: 600px) {
   .Main {
     margin-bottom: 150px;
@@ -166,9 +200,8 @@ span {
     font-size: 25px;
   }
   .Main .container img {
-    width: 40%;
+    width: 70%;
     top: 60vh;
-    margin-left: 30%;
   }
 
   span {
@@ -200,19 +233,21 @@ span {
 
   .Main .container-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 100px;
   }
 
   .Main .container-buttons-boxes {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
   }
 
   .Main .container-select {
     border: none;
-    padding: 15px 22px;
+    padding: 15px;
     background-color: rgb(65, 85, 177);
-    width: 70%;
+    width: 100%;
     border-radius: 4px;
     color: white;
     font-size: 20px;
@@ -229,12 +264,13 @@ span {
       inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
   }
   .Main button {
-    width: 70%;
+    margin-top: 15vh;
+    width: 100%;
     border: none;
     border-radius: 4px solid transparent;
     color: white;
     background-color: #21B6A8;
-    padding: 15px 22px;
+    padding: 15px;
     font-size: 20px;
     font-weight: 540;
     box-shadow: -10px -10px 20px 0 rgba(255, 255, 255, 0.7),
@@ -269,21 +305,57 @@ span {
   .Main .bubble:nth-child(1) {
     width: 40px;
     height: 40px;
-    right: 10%;
+    left: 10%;
     animation-duration: 8s;
   } 
   .Main .bubble:nth-child(2) {
     width: 40px;
     height: 40px;
-    right: 20%;
+    left: 20%;
     animation-duration: 7s;
   }
   .Main .bubble:nth-child(3) {
     width: 40px;
     height: 40px;
-    right: 30%;
+    left: 30%;
     animation-duration: 6s;
   } 
+
+  .random-container-p {
+    margin-left: 20vh;
+    margin-top: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2.4rem;
+    color: rgb(65, 85, 177);
+    margin-bottom: 25px;
+  }
+
+  .random-container-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color:rgba(104, 99, 99, 0.822);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+
+  }
+
+  .random-container-picture {
+    text-align: center;
+    margin-left: 20vh;
+  }
+
+  .Main .random-container img {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  a {
+    text-decoration: none;
+  }
    @keyframes flying {
     0% {
       bottom: -80px;
@@ -298,4 +370,55 @@ span {
     }
   
 }
+}
+
+@media(max-width:849px) {
+  .Main .container-buttons {
+    display: grid;
+  }
+  
+  .Main .container-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .Main .container-buttons-boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .random-container-p {
+    margin-top: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2.4rem;
+    color: rgb(65, 85, 177);
+    margin-bottom: 25px;
+  }
+
+  .random-container-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color:rgba(104, 99, 99, 0.822);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+
+  }
+
+  .random-container-picture {
+    text-align: center;
+
+  }
+
+  .Main .random-container img {
+    width: 80%;
+    border-radius: 6px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
 }
