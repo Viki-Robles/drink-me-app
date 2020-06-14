@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import martini from "./images/martini.png";
 import "./Main.css";
 import Results from "../Results/Results.js";
+import { Link } from "react-router-dom";
+
 
 export default function Main() {
   const [listIngredients, setListIngredients] = useState([]);
@@ -48,9 +50,12 @@ export default function Main() {
               <br />
             </p>
           </div>
-          <p className="container-p">Please select a drink from the drop-down menu.</p>
+          <p className="container-p">Please use the buttons below to choose an ingredient or if you feel is 
+          your "lucky" day choose the "lucky button" for inspiration.</p>
           <div className="container-buttons">
-
+          <div className="main-picture-container">
+              <img src={martini} alt="martini" />
+            </div>
             <div className="container-buttons-boxes">
               <div>
                 <button className="button-random"
@@ -61,10 +66,12 @@ export default function Main() {
                     listRandom.map((drink) => (
                       <div key={drink.idDrink}>
                         <p className="random-container-p">Checkout this one!</p>
+                        <Link to={`/drink/${drink.idDrink}`}>
                         <div className="random-container-picture">
                           <div className="random-container-title">{drink.strDrink}</div>
                           <img src={drink.strDrinkThumb} />
                         </div>
+                        </Link>
                       </div>
                     ))
                   }
@@ -80,11 +87,6 @@ export default function Main() {
                 </select>
               </form>
             </div>
-
-            <div className="main-picture-container">
-              <img src={martini} alt="martini" />
-            </div>
-
           </div>
         </div>
         {ingredient && <Results ingredient={ingredient} />}
