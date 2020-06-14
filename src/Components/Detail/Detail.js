@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Detail.css";
 import { FaCocktail, FaHeartbeat, FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Spinner from "../Spinner/Spinner.js";
 
 export default function Detail({ match }) {
   const [drink, setDrink] = useState([]);
@@ -19,7 +20,7 @@ export default function Detail({ match }) {
   }, [match.params.id]);
 
   if (!isLoaded) {
-    return <div>Loading</div>;
+    return <Spinner />;
   } else {
     return (
       <div className="Detail">
@@ -52,7 +53,8 @@ export default function Detail({ match }) {
               <h3>Instructions:</h3>
               {drink.strInstructions.split(". ").map(
                 (instruction, index) =>
-                  instruction && instruction !== " " && (
+                  instruction &&
+                  instruction !== " " && (
                     <p key={instruction}>
                       <span className="Detail-order">{index + 1}.</span>{" "}
                       {instruction}

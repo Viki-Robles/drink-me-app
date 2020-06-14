@@ -1,34 +1,30 @@
 .Drink .drink-container {
   position: relative;
   text-align: center;
-  border-radius: 35%;
-  box-shadow: 2px 2px 3px #000;
   overflow: hidden;
-  max-width: 230px;
-}
-
-.Drink .drink-container:hover {
-  box-shadow: 2px 2px 20px rgb(0, 0, 0);
 }
 
 .Drink .overlay-title {
   position: absolute;
-  bottom: 25px;
+  bottom: -10px;
   left: 0;
   right: 0;
+  transition: bottom 1s cubic-bezier(0.65,-0.36, 0.43, 1.79);
+}
+
+.drink-container:hover .overlay-title{
+  bottom: 40px;
+
 }
 
 .Drink .overlay-title h3 {
   font-family: "Shadows Into Light", cursive;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: white;
   text-shadow: 1px 1px 1px black;
-  background-color: black;
-  width: 110%;
-  transform: rotate(-7deg);
-  border-top: 3px solid #21b6a8;
-  border-bottom: 3px solid #ffffff;
-  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.445);
+  width: 100%;
+  letter-spacing: 1px;
   padding: 5px 0px;
 }
 
@@ -38,10 +34,13 @@
 }
 
 @media (max-width: 700px) {
-  .Drink .drink-container {
-    max-width: 180px;
-  }
   .Drink .overlay-title h3 {
     font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Drink .drink-container {
+    max-width: 250px;
   }
 }
