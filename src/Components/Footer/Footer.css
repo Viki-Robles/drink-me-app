@@ -1,0 +1,29 @@
+.Footer {
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(65, 85, 177);
+    padding: 2%;
+}
+
+.Footer-logo{
+    position: absolute;
+    color: white;
+    margin-left: 90px;
+    font-size: 20px;   
+    background-color: rgb(65, 85, 177);
+    width: 60%;
+}
+
+@media (min-width: 744px) { 
+    .Footer {
+        position: absolute;
+        background-color: rgb(65, 85, 177);
+        width: 76%;
+    }
+   
+    .Footer-logo {
+        font-size: 25px;
+        color: white;
+        margin-left: 30px;
+    }
+}

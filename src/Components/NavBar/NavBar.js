@@ -7,7 +7,14 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="NavBar">
-      <div className="NavBar-logo">DrinkMeApp</div>
+      <Link
+          className="NavBar-logo"
+          to="Home"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >DrinkMeApp</Link>
       <NavBarButton onButtonSwitched={() => setIsOpen(!isOpen)} />
       <NavBarBox isOpen={isOpen} />
     </div>
