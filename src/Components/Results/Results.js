@@ -36,7 +36,7 @@ export default function Results(props) {
               Number(drink.idDrink) !== 17246 && (
                 <div key={drink.idDrink}>
                   {
-                    <Link to={`/drink/${drink.idDrink}`}>
+                    <Link to={`/drink/${drink.strDrink}`}>
                       <Drink
                         id={drink.idDrink}
                         name={drink.strDrink}

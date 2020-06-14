@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import "./Drink.css";
 
 export default function Drink({ id, name, image }) {

@@ -10,14 +10,14 @@ export default function Detail({ match }) {
 
   useEffect(() => {
     fetch(
-      `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${match.params.id}`
+      `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${match.params.name}`
     )
       .then((response) => response.json())
       .then((json) => {
         setDrink(json.drinks[0]);
         setIsLoaded(true);
       });
-  }, [match.params.id]);
+  }, [match.params.name]);
 
   if (!isLoaded) {
     return <Spinner />;
