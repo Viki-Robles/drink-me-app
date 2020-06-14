@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import "./NavBar.css";
 import { FaAlignJustify } from "react-icons/fa";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
+import Logo from "./Logo.png";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="NavBar">
       <Link
-          className="NavBar-logo"
-          to="Home"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >DrinkMeApp</Link>
+        className="NavBar-logo"
+        to="Home"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+      >
+        <img src={Logo} alt="logo" />
+      </Link>
       <NavBarButton onButtonSwitched={() => setIsOpen(!isOpen)} />
-      <NavBarBox isOpen={isOpen} />
+      <NavBarBox isOpen={isOpen} closeMenu={() => setIsOpen(false)} />
     </div>
   );
 }
@@ -28,18 +32,21 @@ function NavBarButton({ onButtonSwitched }) {
     </button>
   );
 }
-function NavBarBox({ isOpen }) {
+function NavBarBox(props) {
   return (
     <div className="NavBar-logo-menu">
-      <div className={`NavBar-box ${isOpen ? "is-open" : ""}`}>
-      <Link
+      <div className={`NavBar-box ${props.isOpen ? "is-open" : ""}`}>
+        <Link
           className="NavBar-box-link"
           to="Home"
           spy={true}
           smooth={true}
           offset={0}
           duration={500}
-        >Home</Link>
+        >
+          <div onClick={props.closeMenu}>Home</div>
+        </Link>
+
         <Link
           className="NavBar-box-link"
           to="Team"
@@ -47,7 +54,10 @@ function NavBarBox({ isOpen }) {
           smooth={true}
           offset={0}
           duration={500}
-        >Team</Link>
+        >
+          <div onClick={props.closeMenu}>Team</div>
+        </Link>
+
         <Link
           className="NavBar-box-link"
           to="Contact"
@@ -55,7 +65,9 @@ function NavBarBox({ isOpen }) {
           smooth={true}
           offset={0}
           duration={500}
-        >Contact</Link>
+        >
+          <div onClick={props.closeMenu}>Contact</div>{" "}
+        </Link>
       </div>
     </div>
   );
