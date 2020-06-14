@@ -9,7 +9,7 @@
 .Team h2 {
   font-size: 48px;
   color: fff;
-  margin-bottom: 48px;
+
   margin-top: 0;
   color: rgb(65, 85, 177);
 }
@@ -17,20 +17,23 @@
 .Team {
   background-color: #fff;
   text-align: center;
-  padding-top: 80px;
-  padding-right: 0;
-  padding-bottom: 120px;
+  padding-right: 0;  
 }
 
 .Team .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-items: center;
 }
 
 .teamContainer img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  box-shadow: 2px 3px 9px #4155b1;
+  width: 200px;
+  height: 200px;
+  border-radius: 20%;
+}
+
+.fa {
+  color:rgb(65, 85, 177);
+  margin-top: 15px;
 }

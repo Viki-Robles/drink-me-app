@@ -1,17 +1,19 @@
 import React from 'react';
 import './TeamMember.css';
 
-export default function TeamMember(props) {
+export default function TeamMember({name, teamImage, linkedIn, github, email}) {
     return (
         <div className="TeamMember">
-            <a href={props.linkedIn} target="_blank" rel="noopener noreferrer">
-            <a href={props.github} target="_blank" rel="noopener noreferrer">
-                <div className="teamContainer">
-                    <img src={props.teamImage} alt={`${props.name}`} />
-                    <div className="teamMemberName">{props.name}</div>
-                </div>
-                </a>
-            </a>
+                    <div className="teamContainer">
+                    <img src={teamImage} alt={`${name}`} />
+                <div className="teamMemberName">{name}</div>
+                <a href={linkedIn} target="_blank" rel="noopener noreferrer">
+                    <i className="fa fa-linkedin-square fa-4x"></i></a>
+                <a href={github} target="_blank" rel="noopener noreferrer">
+                    <i className="fa fa-github-square fa-4x"></i></a>
+                <a href={email} target="_blank" rel="noopener noreferrer">
+                    <i className="fa fa-envelope-square fa-4x"></i></a>
+            </div>
         </div>
     );
 }
