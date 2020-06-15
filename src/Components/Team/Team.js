@@ -17,6 +17,7 @@ export default function Team() {
                     teamImage={VickyImg}
                     github="https://github.com/Viki-Robles"
                     linkedIn="https://www.linkedin.com/in/vicky-vasilopoulou-52230111b/"
+                    email="vasiliki.robles@gmail.com"
                 />
                 <TeamMember
                     name="Aaron Hawthorne"
@@ -30,6 +31,7 @@ export default function Team() {
                     teamImage={ElenaImg}
                     github="https://github.com/elenasacristan"
                     linkedIn="https://www.linkedin.com/in/elena-sacristan-sacristan/"
+                    email="elena_sacristan@yahoo.com"
                 />
             </div>
         </div>
