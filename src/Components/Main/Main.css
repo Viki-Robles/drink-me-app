@@ -4,7 +4,7 @@
 }
 
 .Main .container {
-  margin-top: 40px;
+  margin-top: 140px;
 }
 
 .Main h2 {
@@ -31,6 +31,7 @@
 .Main .container-buttons-boxes {
   display: grid;
   grid-template-columns: 1fr;
+  margin-bottom: 40px;
 }
 
 

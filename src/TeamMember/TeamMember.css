@@ -1,3 +1,10 @@
+.teamContainer img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+}
+
+
 .TeamMember {
     min-width: 300px;
     padding-bottom: 50px;
@@ -15,4 +22,8 @@
 }
 .TeamMember a {
 padding: 5px;
+}
+
+.fa-4x {
+    font-size: 40px;
 }
