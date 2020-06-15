@@ -11,7 +11,7 @@ export default function TeamMember({name, teamImage, linkedIn, github, email}) {
                     <i className="fa fa-linkedin-square fa-4x"></i></a>
                 <a href={github} target="_blank" rel="noopener noreferrer">
                     <i className="fa fa-github-square fa-4x"></i></a>
-                <a href={email} target="_blank" rel="noopener noreferrer">
+                <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
                     <i className="fa fa-envelope-square fa-4x"></i></a>
             </div>
         </div>
