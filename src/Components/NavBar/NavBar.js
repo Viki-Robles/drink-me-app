@@ -57,17 +57,6 @@ function NavBarBox(props) {
         >
           <div onClick={props.closeMenu}>Team</div>
         </Link>
-
-        <Link
-          className="NavBar-box-link"
-          to="Contact"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          <div onClick={props.closeMenu}>Contact</div>{" "}
-        </Link>
       </div>
     </div>
   );

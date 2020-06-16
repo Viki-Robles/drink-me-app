@@ -1,6 +1,4 @@
 .NavBar {
-   /* position: fixed;
-    width: 81%;*/
     top:0;
     z-index: 1;
     background-color: rgb(65, 85, 177);
@@ -31,31 +29,38 @@
 
 .NavBar-box.is-open {
     display: block;
-    /*position: absolute;*/
     z-index: -1;
     margin-top: 5px;
     width: 80%;
     height: 100%;
     color: white;
-    padding: 10px 18px;
+    padding: 10px 18px ;
     font-weight: 300;
 }
 
 .NavBar-box-link {
     display: block;
-    /*width: 80%;*/
-    margin-left: -15px;
-    margin-top: -1px;
+    width: 80%;
+    margin-left: 15px;
+    margin-top: 20px;
     color: white;
     font-weight: 400;
     background-color: rgb(65, 85, 177);
     margin-bottom: 40px;
     height: 80%;
 }
+.NavBar-box-link:hover{
+    text-decoration: underline;
+    color: rgb(0, 0, 0);  
+}
 
 .NavBar-logo-menu {
     flex-direction: row;
     background-color: rgb(65, 85, 177);
+}
+.navbar-box-item {
+    padding-top: 25px;
+    font-size: 20px;
 }
 
 .NavBar-logo {
@@ -64,15 +69,14 @@
 
 .NavBar-logo img {
     position: absolute;
-    right: -210px;
-    top: -30px;
+    right: -270px;
+    top: -40px;
     width: 140px;
 }
 
 @media (min-width: 744px) {
     .NavBar {
         height: 90px;
-
     }
     .NavBar-box.is-open {
         margin-top: 0px;
@@ -94,7 +98,8 @@
         float: right;
         width: 80px;
         color: white;
-        margin-top: -2px;
+        margin-top: 30px;
+        margin-right: 50px;
         font-weight: 400;
         font-size: 1.2rem;
         background-color: transparent;
@@ -107,5 +112,8 @@
         width: 190px;
         left: 10px;
         top: 3px
+    }
+    .NavBar-box-link:hover{
+        text-decoration: underline;
     }
 }
