@@ -10,7 +10,6 @@ function App() {
       <NavBar />
       <Main />
       <Team />
-      <Footer />
     </div>
   );
 }

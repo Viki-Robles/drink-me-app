@@ -18,6 +18,7 @@ export default function Team() {
                     github="https://github.com/Viki-Robles"
                     linkedIn="https://www.linkedin.com/in/vicky-vasilopoulou-52230111b/"
                     email="vasiliki.robles@gmail.com"
+                    profile="https://www.linkedin.com/in/vicky-vasilopoulou-52230111b/"
                 />
                 <TeamMember
                     name="Aaron Hawthorne"
@@ -25,6 +26,7 @@ export default function Team() {
                     github="https://github.com/Awthor"
                     linkedIn="https://www.linkedin.com/in/aaronhawthorneproptech/"
                     email="aaronhawthorne12345@gmail.com"
+                    profile="https://www.linkedin.com/in/vicky-vasilopoulou-52230111b/"
                 />
                 <TeamMember
                     name="Elena Sacristan"
@@ -32,6 +34,7 @@ export default function Team() {
                     github="https://github.com/elenasacristan"
                     linkedIn="https://www.linkedin.com/in/elena-sacristan-sacristan/"
                     email="elena_sacristan@yahoo.com"
+                    profile="https://www.linkedin.com/in/vicky-vasilopoulou-52230111b/"
                 />
             </div>
         </div>

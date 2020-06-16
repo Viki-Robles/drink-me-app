@@ -1,7 +1,7 @@
 import React from 'react';
 import './TeamMember.css';
 
-export default function TeamMember({name, teamImage, linkedIn, github, email}) {
+export default function TeamMember({name, teamImage, linkedIn, github, email, profile}) {
     return (
         <div className="TeamMember">
                     <div className="teamContainer">
@@ -13,6 +13,8 @@ export default function TeamMember({name, teamImage, linkedIn, github, email}) {
                     <i className="fa fa-github-square fa-4x"></i></a>
                 <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
                     <i className="fa fa-envelope-square fa-4x"></i></a>
+                <a href={profile} target="_blank" rel="noopener noreferrer">
+                    <i className="fa fa-user fa-4x"></i></a>
             </div>
         </div>
     );
