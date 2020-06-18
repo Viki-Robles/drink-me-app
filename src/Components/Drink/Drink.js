@@ -1,7 +1,7 @@
 import React from "react";
 import "./Drink.css";
 
-export default function Drink({ id, name, image }) {
+export default function Drink({ name, image }) {
   return (
     <div className="Drink">
           <div className="drink-container">
