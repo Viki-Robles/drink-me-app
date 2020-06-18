@@ -3,15 +3,10 @@
   background-color: white;
 }
 
-.Main .container {
-  margin-top: 140px;
-}
-
 .Main h2 {
   margin-left: 5px;
-  margin-bottom: 10vh;
   color: rgb(65, 85, 177);
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 500;
 }
 .Main .container img {
@@ -19,33 +14,33 @@
   margin-bottom: 20px;
 }
 
-.Main .container-buttons {
-  display: grid;
+.random-container img {
+  width: 50%;
 }
-
 .Main .container-buttons {
   display: grid;
   grid-template-columns: 1fr;
 }
+
+
 
 .Main .container-buttons-boxes {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 40px;
+  margin-bottom: 150px;
 }
-
 
 .Main .container-select {
   border: none;
   padding: 10px;
-  background-color: #21B6A8;
+  background-color: #21b6a8;
   width: 100%;
   border-radius: 4px;
   color: white;
   font-size: 17px;
   font-weight: 400;
   box-shadow: -10px -10px 20px 0 rgba(255, 255, 255, 0.7),
-  10px 17px 20px 0 rgba(0, 0, 0, 0.2);
+    10px 17px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Main .container-select:hover {
@@ -73,12 +68,11 @@
 
 .Main .container-p {
   color: #a9a9a9;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   margin-top: 40px;
   color: rgb(65, 85, 177);
 }
-
 
 span {
   font-size: 20px;
@@ -87,68 +81,72 @@ span {
   font-weight: 600;
 }
 
+hr.hr1 {
+  display: none;
+}
+
 .container-text p {
   color: #a9a9a9;
+  font-size: 25px;
 }
 
 .Main .bubbles {
   position: absolute;
 }
 .Main .bubbles {
-   position: relative;
-   width: 100%;
-   height: 100%;
-   z-index: 1;
-   top: 0;
- } 
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+}
 .bubble {
-   position: absolute;
-   bottom: 0;
-   width: 40px;
-   height: 40px;
-   background: #b9e5e2;
-   animation: flying 10s infinite;
-   opacity: 0.5;
-   border-radius: 50%;
- }
- .Main .bubble:nth-child(1) {
-   width: 40px;
-   height: 40px;
-   right: 10%;
-   animation-duration: 8s;
- } 
- .Main .bubble:nth-child(2) {
-   width: 40px;
-   height: 40px;
-   right: 20%;
-   animation-duration: 7s;
- }
- .Main .bubble:nth-child(3) {
-   width: 40px;
-   height: 40px;
-   right: 30%;
-   animation-duration: 6s;
- } 
-  @keyframes flying {
-   0% {
-     bottom: -80px;
-     transform: translateX(0);
-   }
-   50% {
-     transform: translateX(100px);
-   }
-   100% {
-     bottom: 1080px;
-     transform: translateX(-200px);
-   }
- 
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background: #b9e5e2;
+  animation: flying 10s infinite;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+.Main .bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  right: 10%;
+  animation-duration: 8s;
+}
+.Main .bubble:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  right: 20%;
+  animation-duration: 7s;
+}
+.Main .bubble:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  right: 30%;
+  animation-duration: 6s;
+}
+@keyframes flying {
+  0% {
+    bottom: -80px;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    bottom: 1080px;
+    transform: translateX(-200px);
+  }
 }
 
 .random-container-p {
   margin-top: 40px;
   font-weight: bold;
   text-align: center;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: "Shadows Into Light", cursive;
   font-size: 2rem;
   color: rgb(65, 85, 177);
   margin-bottom: 25px;
@@ -157,21 +155,11 @@ span {
 .random-container-title {
   text-align: center;
   margin-bottom: 40px;
-  color:rgba(104, 99, 99, 0.822);
+  color: rgba(104, 99, 99, 0.822);
   font-weight: bold;
   text-align: center;
   margin-top: 40px;
   font-size: 1rem;
-
-}
-
-.random-container-picture {
-  text-align: center;
-}
-
-.Main .random-container img {
-  width: 80%;
-  border-radius: 6px;
 }
 
 a {
@@ -190,7 +178,7 @@ a {
   .Main h2 {
     margin-left: 10px;
     color: rgb(65, 85, 177);
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 500;
   }
   .Main .container {
@@ -204,17 +192,24 @@ a {
     width: 70%;
     top: 60vh;
   }
-
+.container-paragraphs{
+  display: grid;
+}
   span {
     font-size: 30px;
     color: rgb(65, 85, 177);
     margin-right: 20px;
     font-weight: 600;
   }
-
+  hr.hr1 {
+    border: 1px solid rgb(65, 85, 177);;
+    margin-top: 50px;
+    width: 80%;
+  }
 
   span:nth-child(10) {
     margin-right: 15px;
+    margin-top: 40px;
   }
 
   .container-logo {
@@ -254,7 +249,7 @@ a {
     font-size: 20px;
     font-weight: 540;
     box-shadow: -10px -10px 20px 0 rgba(255, 255, 255, 0.7),
-    10px 17px 20px 0 rgba(0, 0, 0, 0.2);
+      10px 17px 20px 0 rgba(0, 0, 0, 0.2);
   }
   .Main .container-form {
     margin-top: 15vh;
@@ -270,12 +265,12 @@ a {
     border: none;
     border-radius: 4px solid transparent;
     color: white;
-    background-color: #21B6A8;
+    background-color: #21b6a8;
     padding: 15px;
     font-size: 20px;
     font-weight: 540;
     box-shadow: -10px -10px 20px 0 rgba(255, 255, 255, 0.7),
-    10px 17px 20px 0 rgba(0, 0, 0, 0.2);
+      10px 17px 20px 0 rgba(0, 0, 0, 0.2);
   }
 
   .Main button:hover {
@@ -283,17 +278,17 @@ a {
       inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
   }
 
- .Main .bubbles {
-   position: absolute;
- }
- .Main .bubbles {
+  .Main .bubbles {
+    position: absolute;
+  }
+  .Main .bubbles {
     position: relative;
     width: 100%;
     height: 100%;
     z-index: 1;
     top: 0;
-  } 
-.bubble {
+  }
+  .bubble {
     position: absolute;
     bottom: 0;
     width: 40px;
@@ -308,7 +303,7 @@ a {
     height: 40px;
     left: 10%;
     animation-duration: 8s;
-  } 
+  }
   .Main .bubble:nth-child(2) {
     width: 40px;
     height: 40px;
@@ -320,44 +315,54 @@ a {
     height: 40px;
     left: 30%;
     animation-duration: 6s;
-  } 
+  }
 
   .random-container-p {
     margin-left: 20vh;
     margin-top: 40px;
     font-weight: bold;
     text-align: center;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: "Shadows Into Light", cursive;
     font-size: 2.4rem;
     color: rgb(65, 85, 177);
     margin-bottom: 25px;
   }
 
-  .random-container-title {
-    text-align: center;
-    margin-bottom: 40px;
-    color:rgba(104, 99, 99, 0.822);
-    font-weight: bold;
-    text-align: center;
-    margin-top: 40px;
-    font-size: 1.2rem;
+  .random-container:hover .overlay-title{
+    bottom: 40px;
+  
+  }
+  .random-overlay-title {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 0.9rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: rgba(0, 0, 0, 0.445);
+  width: 100%;
+  letter-spacing: 1px;
+  padding: 5px 0px;
 
   }
 
-  .random-container-picture {
-    text-align: center;
-    margin-left: 20vh;
+  .random-container.overlay-title {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    transition: bottom 1s cubic-bezier(0.65,-0.36, 0.43, 1.79);
   }
+
 
   .Main .random-container img {
-    width: 100%;
+    width: 40%;
     border-radius: 6px;
+    margin-left: 60px;
   }
 
   a {
     text-decoration: none;
   }
-   @keyframes flying {
+  @keyframes flying {
     0% {
       bottom: -80px;
       transform: translateX(0);
@@ -369,20 +374,19 @@ a {
       bottom: 1080px;
       transform: translateX(-200px);
     }
-  
-}
+  }
 }
 
-@media(max-width:849px) {
+@media (max-width: 849px) {
   .Main .container-buttons {
     display: grid;
   }
-  
+
   .Main .container-buttons {
     display: grid;
     grid-template-columns: 1fr;
   }
-  
+
   .Main .container-buttons-boxes {
     display: grid;
     grid-template-columns: 1fr;
@@ -391,7 +395,7 @@ a {
     margin-top: 40px;
     font-weight: bold;
     text-align: center;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: "Shadows Into Light", cursive;
     font-size: 2.4rem;
     color: rgb(65, 85, 177);
     margin-bottom: 25px;
@@ -400,26 +404,22 @@ a {
   .random-container-title {
     text-align: center;
     margin-bottom: 40px;
-    color:rgba(104, 99, 99, 0.822);
+    color: rgba(104, 99, 99, 0.822);
     font-weight: bold;
     text-align: center;
     margin-top: 40px;
     font-size: 1.2rem;
-
   }
 
   .random-container-picture {
     text-align: center;
-
   }
 
   .Main .random-container img {
-    width: 80%;
     border-radius: 6px;
   }
 
   a {
     text-decoration: none;
   }
-
 }

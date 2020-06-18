@@ -34,25 +34,28 @@ export default function Main() {
     return (
       <div className="Main" id="Home">
         <div className="container">
-          <h2>Let's do some Chemistry together..</h2>
+          <h2>Let's do some Chemistry together...</h2>
           <div className="bubbles">
             <div className="bubble"></div>
             <div className="bubble"></div>
             <div className="bubble"></div>
           </div>
+          <div className="container-paragraphs">
           <div className="container-text">
             <p>
-              <span className="container-logo">DrinkMeApp</span>
-              is an application where you can be creative at home on your own
-              space and experiment the different type of coctails and drinks
-              that are available on our "DYI" recipe guide.
+              Have you ever been in a situation where the sun is shining is on and
+              all you want is a cocktail to cool you down?
+              <br />Me too! We have made it easy for you to decide what cocktail to make.
               <br />
             </p>
           </div>
           <p className="container-p">
-            Please use the buttons below to choose an ingredient or if you feel
-            is your "lucky" day choose the "lucky button" for inspiration.
+            Click on an ingredient below and voila, hey presto you have a selection to choose from.<br />
+            Not sure on how to make it? No worries, click on your cocktail 
+            of choice and we’ll help you through making it!
+            <br/><br/>Feeling lucky? <br /><br />Live on the edge and find a new cocktail to make.
           </p>
+          </div>
           <div className="container-buttons">
             <div className="main-picture-container">
               <img src={martini} alt="martini" />
@@ -65,16 +68,16 @@ export default function Main() {
                 >
                   Feeling lucky
                 </button>
-                <div className="random-container">
+                <div className="random">
                   {listRandom.map((drink) => (
                     <div key={drink.idDrink}>
                       <p className="random-container-p">Checkout this one!</p>
                       <Link to={`/drink/${drink.idDrink}`}>
-                        <div className="random-container-picture">
-                          <div className="random-container-title">
+                        <div className="random-container">
+                          <img src={drink.strDrinkThumb} />
+                          <div className="random-overlay-title">
                             {drink.strDrink}
                           </div>
-                          <img src={drink.strDrinkThumb} />
                         </div>
                       </Link>
                     </div>
@@ -104,6 +107,7 @@ export default function Main() {
           </div>
         </div>
         {ingredient && <Results ingredient={ingredient} />}
+        <hr className="hr1"/>
       </div>
     );
   }
