@@ -1,11 +1,11 @@
 import React from 'react';
 import './TeamMember.css';
 
-export default function TeamMember({name, teamImage, linkedIn, github, email, profile}) {
+export default function TeamMember({ name, teamImage, linkedIn, github, email, profile }) {
     return (
         <div className="TeamMember">
-                    <div className="teamContainer">
-                    <img src={teamImage} alt={`${name}`} />
+            <div className="teamContainer">
+                <img src={teamImage} alt={`${name}`} />
                 <div className="teamMemberName">{name}</div>
                 <a href={linkedIn} target="_blank" rel="noopener noreferrer">
                     <i className="fa fa-linkedin-square fa-4x"></i></a>
