@@ -202,9 +202,10 @@ a {
     font-weight: 600;
   }
   hr.hr1 {
-    border: 1px solid rgb(65, 85, 177);;
+    border: 0.3px solid #cfc5c5;
     margin-top: 50px;
-    width: 80%;
+    width: 30%;
+    display: block;
   }
 
   span:nth-child(10) {
