@@ -10,7 +10,7 @@ export default function ButtonUp() {
     }
 
     return (
-        <div>
+        <div className="buttonUp-wrapper">
             <button onClick={buttonUp}
                 className="buttonUp">Go Up</button>
         </div>
