@@ -41,20 +41,28 @@ export default function Main() {
             <div className="bubble"></div>
           </div>
           <div className="container-paragraphs">
-          <div className="container-text">
-            <p>
-              Have you ever been in a situation where the sun is shining is on and
-              all you want is a cocktail to cool you down?
-              <br />Me too! We have made it easy for you to decide what cocktail to make.
+            <div className="container-text">
+              <p>
+                Have you ever been in a situation where the sun is shining is on
+                and all you want is a cocktail to cool you down?
+                <br />
+                Me too! We have made it easy for you to decide what cocktail to
+                make.
+                <br />
+              </p>
+            </div>
+            <p className="container-p">
+              Click on an ingredient below and voila, hey presto you have a
+              selection to choose from.
               <br />
+              Not sure on how to make it? No worries, click on your cocktail of
+              choice and we’ll help you through making it!
+              <br />
+              <br />
+              Feeling lucky? <br />
+              <br />
+              Live on the edge and find a new cocktail to make.
             </p>
-          </div>
-          <p className="container-p">
-            Click on an ingredient below and voila, hey presto you have a selection to choose from.<br />
-            Not sure on how to make it? No worries, click on your cocktail 
-            of choice and we’ll help you through making it!
-            <br/><br/>Feeling lucky? <br /><br />Live on the edge and find a new cocktail to make.
-          </p>
           </div>
           <div className="container-buttons">
             <div className="main-picture-container">
@@ -89,6 +97,9 @@ export default function Main() {
                   onChange={(e) => setIngredient(e.target.value)}
                   className="container-select"
                 >
+                  <option selected disabled>
+                    Choose your ingredient here
+                  </option>
                   {listIngredients
                     .sort((drinkA, drinkB) =>
                       drinkA.strIngredient1 > drinkB.strIngredient1 ? 1 : -1
@@ -107,7 +118,7 @@ export default function Main() {
           </div>
         </div>
         {ingredient && <Results ingredient={ingredient} />}
-        <hr className="hr1"/>
+        <hr className="hr1" />
       </div>
     );
   }
