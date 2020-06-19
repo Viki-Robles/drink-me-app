@@ -32,6 +32,7 @@ function NavBarButton({ onButtonSwitched }) {
     </button>
   );
 }
+
 function NavBarBox(props) {
   return (
     <div className="NavBar-logo-menu">
@@ -46,7 +47,6 @@ function NavBarBox(props) {
         >
           <div onClick={props.closeMenu}>Home</div>
         </Link>
-
         <Link
           className="NavBar-box-link"
           to="Team"

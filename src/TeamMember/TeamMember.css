@@ -1,6 +1,4 @@
 .teamContainer img {
-    width: 250px;
-    height: 250px;
     border-radius: 20%;
 }
 
@@ -11,7 +9,6 @@
 
 .TeamMember a {
     text-decoration: none;
-
 }
 
 .teamMemberName {
@@ -25,7 +22,6 @@
 }
 
 .fa-4x {
-    font-size: 50px;
-    width: 50px;
-
+    font-size: 40px;
+    width: 40px;
 }
