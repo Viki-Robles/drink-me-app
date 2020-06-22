@@ -1,6 +1,11 @@
 .Main {
-  margin-top: 20vh;
-  background-color: white;
+  padding: 100px 50px 40px;
+  background: url("/tropical2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 80px;
 }
 
 .Main h2 {
@@ -10,9 +15,6 @@
   font-weight: 600;
 }
 
-.random-container img {
-  width: 50%;
-}
 .Main .container-buttons {
   display: grid;
   grid-template-columns: 1fr;
@@ -60,7 +62,6 @@
     inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-
 span {
   font-size: 20px;
   color: rgb(65, 85, 177);
@@ -72,38 +73,12 @@ hr.hr1 {
   display: none;
 }
 
-.random-container-p {
-  margin-top: 40px;
-  font-weight: bold;
-  text-align: center;
-  font-family: "Shadows Into Light", cursive;
-  font-size: 2rem;
-  color: rgb(65, 85, 177);
-  margin-bottom: 25px;
-}
-
-.random-container-title {
-  text-align: center;
-  margin-bottom: 40px;
-  color: rgba(104, 99, 99, 0.822);
-  font-weight: bold;
-  text-align: center;
-  margin-top: 40px;
-  font-size: 1rem;
-}
-
 a {
   text-decoration: none;
 }
 
 @media (min-width: 600px) {
-  .Main {
-    margin-bottom: 150px;
-    padding-bottom: 40px;
-    padding-top: 40px;
-    background-image: url('/public/tropical2.jpg');
-    width: 100%;
-  }
+
 
   .Main h2 {
     margin-left: 10px;
@@ -191,51 +166,7 @@ a {
       inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
   }
 
-  .random-container-p {
-    margin-left: 20vh;
-    margin-top: 40px;
-    font-weight: bold;
-    text-align: center;
-    font-family: "Shadows Into Light", cursive;
-    font-size: 2.4rem;
-    color: rgb(65, 85, 177);
-    margin-bottom: 25px;
-  }
-
-  .random-container:hover .overlay-title{
-    bottom: 40px;
-  
-  }
-  .random-overlay-title {
-  font-family: "Shadows Into Light", cursive;
-  font-size: 0.9rem;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  background-color: rgba(0, 0, 0, 0.445);
-  width: 100%;
-  letter-spacing: 1px;
-  padding: 5px 0px;
-
-  }
-
-  .random-container.overlay-title {
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    right: 0;
-    transition: bottom 1s cubic-bezier(0.65,-0.36, 0.43, 1.79);
-  }
-
-
-  .Main .random-container img {
-    width: 40%;
-    border-radius: 6px;
-    margin-left: 60px;
-  }
-
   a {
     text-decoration: none;
   }
 }
-
-
