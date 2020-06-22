@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./Main.css";
 import Results from "../Results/Results.js";
 import { Link } from "react-router-dom";
-import tropical2 from "../Main/images/tropical2.jpg";
 import Bubbles from "../Bubbles/Bubbles";
 import MainText from "../MainText/MainText";
 
@@ -34,46 +33,51 @@ export default function Main() {
     return <div>Loadin Main...</div>;
   } else {
     return (
-      <div className="Main" id="Home">
-        <div className="container">
-          <h2>Fancy a cocktail?</h2>
-          <Bubbles />
-          <div className="container-main">
-            <img src={tropical2} />
-            <MainText />
-          <div className="container-buttons">
-            <div className="container-buttons-boxes">
-              <div>
-                <button
-                  className="button-random"
-                  onClick={() => fetchRandomData(!buttonOn)}>
-                  Feeling lucky
-                </button>
+      <div>
+        <>
+          <div className="Main" id="Home">
+            <div className="container">
+              <h2>Fancy a cocktail?</h2>
+              <Bubbles />
+              <div className="container-main">
+                <MainText />
+                <div className="container-buttons">
+                  <div className="container-buttons-boxes">
+                    <div>
+                      <button
+                        className="button-random"
+                        onClick={() => fetchRandomData(!buttonOn)}>
+                        Feeling lucky
+                      </button>
+                      <div className="random">
+                      </div>
+                    </div>
+                    <form className="container-form">
+                      <select
+                        onChange={(e) => setIngredient(e.target.value)}
+                        className="container-select">
+                        <option selected disabled>Choose your ingredient here
+                        </option>
+                        {listIngredients
+                          .sort((drinkA, drinkB) =>
+                            drinkA.strIngredient1 > drinkB.strIngredient1 ? 1 : -1)
+                          .map((drink) => (
+                            <option
+                              key={drink.strIngredient1}
+                              value={drink.strIngredient1}>
+                              {drink.strIngredient1}
+                            </option>
+                          ))}
+                      </select>
+                    </form>
+                  </div>
+                </div>
               </div>
-              <form className="container-form">
-                <select
-                  onChange={(e) => setIngredient(e.target.value)}
-                  className="container-select">
-                  <option selected disabled>Choose your ingredient here
-                  </option>
-                  {listIngredients
-                    .sort((drinkA, drinkB) =>
-                      drinkA.strIngredient1 > drinkB.strIngredient1 ? 1 : -1)
-                    .map((drink) => (
-                      <option
-                        key={drink.strIngredient1}
-                        value={drink.strIngredient1}>
-                        {drink.strIngredient1}
-                      </option>
-                    ))}
-                </select>
-              </form>
             </div>
           </div>
-          </div>
-        </div>
-        {ingredient && <Results ingredient={ingredient} />}
-        <div className="random">
+        </>
+        <div>
+          {ingredient && <Results ingredient={ingredient} />}
           {listRandom.map((drink) => (
             <div key={drink.idDrink}>
               <p className="random-container-p">Checkout this one!</p>
@@ -87,8 +91,8 @@ export default function Main() {
               </Link>
             </div>
           ))}
+          <hr className="hr1" />
         </div>
-        <hr className="hr1" />
       </div>
     );
   }
