@@ -1,13 +1,13 @@
 .Main {
-  margin-top: 13vh;
+  margin-top: 20vh;
   background-color: white;
 }
 
 .Main h2 {
   margin-left: 5px;
-  color: rgb(65, 85, 177);
-  font-size: 25px;
-  font-weight: 500;
+  color: #21b6a8;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .random-container img {
@@ -16,6 +16,7 @@
 .Main .container-buttons {
   display: grid;
   grid-template-columns: 1fr;
+  margin-bottom: 50px;
 }
 
 .Main .container-buttons-boxes {
@@ -71,58 +72,6 @@ hr.hr1 {
   display: none;
 }
 
-.Main .bubbles {
-  position: absolute;
-}
-.Main .bubbles {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  top: 0;
-}
-.bubble {
-  position: absolute;
-  bottom: 0;
-  width: 40px;
-  height: 40px;
-  background: #b9e5e2;
-  animation: flying 10s infinite;
-  opacity: 0.5;
-  border-radius: 50%;
-}
-.Main .bubble:nth-child(1) {
-  width: 40px;
-  height: 40px;
-  right: 10%;
-  animation-duration: 8s;
-}
-.Main .bubble:nth-child(2) {
-  width: 40px;
-  height: 40px;
-  right: 20%;
-  animation-duration: 7s;
-}
-.Main .bubble:nth-child(3) {
-  width: 40px;
-  height: 40px;
-  right: 30%;
-  animation-duration: 6s;
-}
-@keyframes flying {
-  0% {
-    bottom: -80px;
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(100px);
-  }
-  100% {
-    bottom: 1080px;
-    transform: translateX(-200px);
-  }
-}
-
 .random-container-p {
   margin-top: 40px;
   font-weight: bold;
@@ -150,33 +99,21 @@ a {
 @media (min-width: 600px) {
   .Main {
     margin-bottom: 150px;
-    margin-top: 10vh;
-    background-color: white;
     padding-bottom: 40px;
     padding-top: 40px;
+    background-image: url('/public/tropical2.jpg');
+    width: 100%;
   }
 
   .Main h2 {
     margin-left: 10px;
-    color: rgb(65, 85, 177);
+    color: #21b6a8;
     font-size: 50px;
     font-weight: 500;
   }
   .Main .container-main {
     display: grid;
     grid-template-columns: 1fr;
-  }
-  .Main .container-main p {
-    position: absolute;
-    color: rgb(65, 85, 177);
-    margin-left: 20px;
-    font-weight: 600;
-    font-size: 20px;
-  }
-  .Main .container img {
-    width: 100%;
-    opacity: 0.8;
-    border-radius: 6px;
   }
 
   span {
@@ -197,13 +134,6 @@ a {
     margin-top: 40px;
   }
 
-  .container-logo {
-    font-weight: bold;
-  }
-  .container-text p {
-    color: #a9a9a9;
-  }
-
   .Main .container-p {
     color: #a9a9a9;
     font-size: 25px;
@@ -213,9 +143,9 @@ a {
   }
 
   .Main .container-buttons {
-    position: absolute;
-    margin-top: 55vh;
+    margin-top: 15vh;
     margin-left: 20px;
+    width: 30%;
   }
 
   .Main .container-buttons-boxes {
@@ -259,45 +189,6 @@ a {
   .Main button:hover {
     box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 0.7),
       inset 7px 7px 20px 0 rgba(0, 0, 0, 0.2);
-  }
-
-  .Main .bubbles {
-    position: absolute;
-  }
-  .Main .bubbles {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    top: 0;
-  }
-  .bubble {
-    position: absolute;
-    bottom: 0;
-    width: 40px;
-    height: 40px;
-    background: #b9e5e2;
-    animation: flying 10s infinite;
-    opacity: 0.5;
-    border-radius: 50%;
-  }
-  .Main .bubble:nth-child(1) {
-    width: 40px;
-    height: 40px;
-    left: 10%;
-    animation-duration: 8s;
-  }
-  .Main .bubble:nth-child(2) {
-    width: 40px;
-    height: 40px;
-    left: 20%;
-    animation-duration: 7s;
-  }
-  .Main .bubble:nth-child(3) {
-    width: 40px;
-    height: 40px;
-    left: 30%;
-    animation-duration: 6s;
   }
 
   .random-container-p {
@@ -344,19 +235,6 @@ a {
 
   a {
     text-decoration: none;
-  }
-  @keyframes flying {
-    0% {
-      bottom: -80px;
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(100px);
-    }
-    100% {
-      bottom: 1080px;
-      transform: translateX(-200px);
-    }
   }
 }
 

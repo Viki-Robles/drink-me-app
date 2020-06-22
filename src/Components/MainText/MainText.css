@@ -1,0 +1,17 @@
+
+.Main .container-main p {
+    color: rgb(65, 85, 177);
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+@media(min-width:600px) {
+.Main .container-main p {
+    color: rgb(65, 85, 177);
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+}
