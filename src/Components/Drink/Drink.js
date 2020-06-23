@@ -10,9 +10,9 @@ export default function Drink({ name, image }) {
 
   return (
     <div className="Drink" data-aos="fade-up">
-      <div className="drink-container">
+      <div className="Drink-container">
         <img src={image} alt={name} />
-        <div className="overlay-title">
+        <div className="Drink-overlay-title">
           <h3>{name}</h3>
         </div>
       </div>

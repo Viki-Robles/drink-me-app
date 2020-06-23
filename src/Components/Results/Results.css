@@ -1,4 +1,8 @@
-.results-header {
+.Results{
+    padding-bottom: 80px;
+}
+
+.Results-header {
     font-weight: bold;
     text-align: center;
     font-family: 'Shadows Into Light', cursive;
@@ -6,17 +10,16 @@
     color: rgb(65, 85, 177);
 }
 
-.Results .results-container {
+.Results-container {
     padding: 5%;
     display: grid;
     grid-gap: 2px;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     justify-items: center;
-    justify-content: stretch;
 }
 
 @media (max-width: 700px) { 
-    .Results .results-container {
+    .Results-container {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));  
     } 
 }
