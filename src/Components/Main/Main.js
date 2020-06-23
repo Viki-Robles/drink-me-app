@@ -11,6 +11,7 @@ export default function Main() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [buttonOn, setButtonOn] = useState(false);
   const [listRandom, setRandom] = useState([]);
+  const [showRandom, setShowRandom] = useState(false);
 
   useEffect(() => {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list")
@@ -26,6 +27,7 @@ export default function Main() {
       .then((response) => response.json())
       .then((json) => {
         setRandom(json.drinks);
+        setShowRandom(true);
       });
   };
 
@@ -33,10 +35,10 @@ export default function Main() {
     return <div>Loadin Main...</div>;
   } else {
     return (
-      <div>
+      <>
         <div className="Main" id="Home">
           <div className="container">
-            <h2>Fancy a cocktail?</h2>
+            <h2>Fancy a drink?</h2>
             <Bubbles />
             <div className="container-main">
               <div className="container-maintext">
@@ -59,7 +61,7 @@ export default function Main() {
                       className="container-select"
                     >
                       <option selected disabled>
-                        Choose your ingredient here
+                        Choose an ingredient
                       </option>
                       {listIngredients
                         .sort((drinkA, drinkB) =>
@@ -80,9 +82,9 @@ export default function Main() {
             </div>
           </div>
         </div>
-        <Random listRandom={listRandom} />
+        {showRandom && <Random listRandom={listRandom} closeRandom={() => setShowRandom(false)} tryAgain={() => fetchRandomData(!buttonOn)}/>}
         {ingredient && <Results ingredient={ingredient} />}
-      </div>
+      </>
     );
   }
 }
