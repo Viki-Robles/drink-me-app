@@ -1,11 +1,15 @@
 .Main {
-  padding: 100px 50px 40px;
+  padding-top: 100px;
   background: url("/coconut1.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   margin-bottom: 80px;
+}
+
+.Main .container {
+  padding-left: 5%;
 }
 
 .Main h2 {
@@ -15,18 +19,15 @@
   font-weight: bold;
 }
 .Main .container-maintext {
-  position: relative;
-  box-sizing: border-box;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
   height: 100%;
-  width: 100%;
   border-radius: 5px;
 }
 .Main .container-buttons {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 50px;
-  width: 100%;
+  padding-bottom: 50px;
+  width: 80%;
 }
 
 .Main .container-buttons-boxes {
@@ -87,13 +88,11 @@ a {
 }
 
 @media (min-width: 600px) {
-
   .Main {
     width: 100%;
   }
 
   .Main h2 {
-    color: rgb(65, 85, 177);
     font-size: 50px;
     font-weight: 600;
     margin-top: 60px;
@@ -106,8 +105,7 @@ a {
   .Main .container-maintext {
     position: relative;
     box-sizing: border-box;
-    background: rgba(255,255,255,0.5);
-    height: 400px;
+    background: rgba(255, 255, 255, 0.5);
     width: 400px;
     border-radius: 5px;
   }

@@ -1,65 +1,115 @@
+.Random {
+  background-color: rgba(2, 2, 2, 0.356);
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  width: 100%;
+  height: 200%;
+}
 
-.random-container img {
-    width: 50%;
-  }
+.Random-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: -20px;
+}
 
-  
-.random-container-p {
-    margin-top: 40px;
-    font-weight: bold;
-    text-align: center;
-    font-family: "Shadows Into Light", cursive;
-    font-size: 2rem;
-    color: rgb(65, 85, 177);
-    margin-bottom: 25px;
-  }
-  
-  .random-container-title {
-    text-align: center;
-    margin-bottom: 40px;
-    color: rgba(104, 99, 99, 0.822);
-    font-weight: bold;
-    text-align: center;
-    margin-top: 40px;
-    font-size: 1rem;
-  }
+.Random button {
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+}
 
-  
-  .random-container-p {
-    margin-left: 20vh;
-    margin-top: 40px;
-    font-weight: bold;
-    text-align: center;
-    font-family: "Shadows Into Light", cursive;
-    font-size: 2.4rem;
-    color: rgb(65, 85, 177);
-    margin-bottom: 25px;
-  }
+.Random-buttons svg {
+  overflow: visible;
+}
 
-  .random-container:hover .overlay-title {
-    bottom: 40px;
-  }
-  .random-overlay-title {
-    font-family: "Shadows Into Light", cursive;
-    font-size: 0.9rem;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    background-color: rgba(0, 0, 0, 0.445);
-    width: 100%;
-    letter-spacing: 1px;
-    padding: 5px 0px;
-  }
+.Random-buttons path {
+  stroke: #21b6a8;
+  stroke-width: 3;
+}
 
-  .random-container.overlay-title {
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    right: 0;
-    transition: bottom 1s cubic-bezier(0.65, -0.36, 0.43, 1.79);
-  }
+.Random button:focus {
+  border: none;
+  outline: none;
+}
 
-  .Main .random-container img {
-    width: 40%;
-    border-radius: 6px;
-    margin-left: 60px;
+.Random-box {
+  background-color: rgba(255, 255, 255, 0.932);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 12%;
+  text-align: center;
+  padding: 4%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 1px #444;
+}
+
+.Random-container {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin: auto;
+  max-width: 250px;
+}
+
+p.Random-title {
+  font-family: "Shadows Into Light", cursive;
+  color: #4155b1;
+  font-weight: 600;
+  margin: 0;
+}
+
+.Random-overlay-title {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  transition: bottom 1s cubic-bezier(0.65, -0.36, 0.43, 1.79);
+}
+
+.Random-container:hover .Random-overlay-title {
+  bottom: 40px;
+}
+
+.Random-overlay-title h3 {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 0.9rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: rgba(0, 0, 0, 0.445);
+  width: 100%;
+  letter-spacing: 1px;
+  padding: 5px 0px;
+}
+
+.Random img {
+  width: 100%;
+  margin-bottom: -8px;
+  margin-top: 15px;
+}
+
+@media (max-width: 1100px) {
+  .Random-buttons {
+    margin-top: 0px;
   }
+}
+
+@media (max-width: 600px) {
+  .Random button {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .Random-box {
+    left: 10%;
+    transform: translateX(0);
+    right: 10%;
+  }
+  .Random-overlay-title h3 {
+    font-size: 0.7rem;
+  }
+}

@@ -1,34 +1,25 @@
-.Results {
-    padding-top: 100px;
+.Results{
+    padding-bottom: 80px;
 }
 
-.results-header {
+.Results-header {
     font-weight: bold;
     text-align: center;
     font-family: 'Shadows Into Light', cursive;
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: rgb(65, 85, 177);
-    margin-bottom: 25px;
 }
 
-.Results .results-container {
+.Results-container {
     padding: 5%;
     display: grid;
     grid-gap: 2px;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     justify-items: center;
-    justify-content: stretch;
-
 }
 
 @media (max-width: 700px) { 
-    .Results .results-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  
-    } 
-}
-
-@media (max-width: 700px) { 
-    .Results .results-container {
+    .Results-container {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));  
     } 
 }
