@@ -1,6 +1,6 @@
 .Main {
   padding: 100px 50px 40px;
-  background: url("/tropical2.jpg") no-repeat center center fixed;
+  background: url("/coconut1.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,20 +10,29 @@
 
 .Main h2 {
   margin-left: 5px;
-  color: #21b6a8;
+  color: rgb(65, 85, 177);
   font-size: 28px;
-  font-weight: 600;
+  font-weight: bold;
 }
-
+.Main .container-maintext {
+  position: relative;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.5);
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
 .Main .container-buttons {
   display: grid;
   grid-template-columns: 1fr;
   margin-bottom: 50px;
+  width: 80%;
 }
 
 .Main .container-buttons-boxes {
   display: grid;
   grid-template-columns: 1fr;
+  grid-gap: 15px;
 }
 
 .Main .container-select {
@@ -81,14 +90,23 @@ a {
 
 
   .Main h2 {
-    margin-left: 10px;
-    color: #21b6a8;
+    color: rgb(65, 85, 177);
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 600;
+    margin-top: 60px;
   }
   .Main .container-main {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .Main .container-maintext {
+    position: relative;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.5);
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
   }
 
   span {
@@ -119,7 +137,6 @@ a {
 
   .Main .container-buttons {
     margin-top: 15vh;
-    margin-left: 20px;
     width: 30%;
   }
 

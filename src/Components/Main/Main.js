@@ -39,7 +39,9 @@ export default function Main() {
             <h2>Fancy a cocktail?</h2>
             <Bubbles />
             <div className="container-main">
+              <div className="container-maintext">
               <MainText />
+              </div>
               <div className="container-buttons">
                 <div className="container-buttons-boxes">
                   <div>
@@ -78,7 +80,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-        <Random listRandom={listRandom}/>
+        <Random listRandom={listRandom} />
         {ingredient && <Results ingredient={ingredient} />}
       </div>
     );
