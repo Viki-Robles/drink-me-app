@@ -2,39 +2,46 @@
   background-color: rgba(2, 2, 2, 0.356);
   position: absolute;
   right: 0%;
-  top:0%;
+  top: 0%;
   width: 100%;
   height: 200%;
 }
-.Random-buttons{
+.Random-buttons {
   display: flex;
   width: 100%;
   justify-content: space-between;
   margin-top: -20px;
-
 }
-.Random button{
-  font-size: 2.5rem;
+.Random button {
+  font-size: 2rem;
   background-color: transparent;
-  border:none;
-  color:#21b6a8;
+  border: none;
+  margin-bottom: 20px;
 }
-.Random button:focus{
-  border:none;
+.Random-buttons svg {
+  overflow: visible;
+}
+
+.Random-buttons path {
+  stroke: #21b6a8;
+  stroke-width: 3;
+}
+
+.Random button:focus {
+  border: none;
   outline: none;
 }
-
 
 .Random-box {
   background-color: rgba(255, 255, 255, 0.932);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top:12%;
+  top: 12%;
   text-align: center;
   padding: 4%;
   border-radius: 15px;
-  box-shadow: 0px 0px 5px 1px #4155b1;
+  box-shadow: 0px 0px 10px 1px #444;
 }
 
 .random-container {
@@ -81,26 +88,25 @@ p.random-container-title {
   margin-top: 15px;
 }
 
-
-
- @media (max-width: 1100px) {
-  .Random-buttons{
+@media (max-width: 1100px) {
+  .Random-buttons {
     margin-top: 0px;
   }
 }
 
-@media (max-width: 450px) {
-  .random-overlay-title h3 {
-   font-size: 0.7rem;
+@media (max-width: 600px) {
+  .Random button {
+    font-size: 1.5rem;
   }
 }
 
-
-
- @media (max-width: 450px) {
+@media (max-width: 450px) {
   .Random-box {
     left: 10%;
-    transform: translateX(0); 
+    transform: translateX(0);
     right: 10%;
+  }
+  .random-overlay-title h3 {
+    font-size: 0.7rem;
   }
 }

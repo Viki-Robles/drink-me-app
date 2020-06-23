@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Random.css";
-import { FaRegWindowClose, FaRedo } from "react-icons/fa";
+import { GrUpdate, GrClose } from "react-icons/gr";
 
 export default function Random({ listRandom, closeRandom, tryAgain }) {
   return (
@@ -9,10 +9,10 @@ export default function Random({ listRandom, closeRandom, tryAgain }) {
       <div className="Random-box">
         <div className="Random-buttons">
           <button onClick={tryAgain}>
-            <FaRedo />
+            <GrUpdate />
           </button>
           <button onClick={closeRandom}>
-            <FaRegWindowClose />
+            <GrClose />
           </button>
         </div>
 
