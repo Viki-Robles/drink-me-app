@@ -2,6 +2,7 @@
   position: relative;
   text-align: center;
   overflow: hidden;
+  max-width: 250px;
 }
 
 .Drink .overlay-title {
@@ -39,8 +40,5 @@
   }
 }
 
-@media (min-width: 1200px) {
-  .Drink .drink-container {
-    max-width: 250px;
-  }
-}
+
+
