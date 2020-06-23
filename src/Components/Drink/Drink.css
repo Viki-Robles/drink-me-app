@@ -1,11 +1,10 @@
-.Drink .drink-container {
+.Drink-container {
   position: relative;
   text-align: center;
   overflow: hidden;
-  max-width: 250px;
 }
 
-.Drink .overlay-title {
+.Drink-overlay-title {
   position: absolute;
   bottom: -10px;
   left: 0;
@@ -13,12 +12,12 @@
   transition: bottom 1s cubic-bezier(0.65,-0.36, 0.43, 1.79);
 }
 
-.drink-container:hover .overlay-title{
+.Drink-container:hover .Drink-overlay-title{
   bottom: 40px;
 
 }
 
-.Drink .overlay-title h3 {
+.Drink-overlay-title h3 {
   font-family: "Shadows Into Light", cursive;
   font-size: 0.9rem;
   color: white;
@@ -35,7 +34,7 @@
 }
 
 @media (max-width: 700px) {
-  .Drink .overlay-title h3 {
+  .Drink-overlay-title h3 {
     font-size: 0.7rem;
   }
 }

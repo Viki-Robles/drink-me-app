@@ -6,18 +6,21 @@
   width: 100%;
   height: 200%;
 }
+
 .Random-buttons {
   display: flex;
   width: 100%;
   justify-content: space-between;
   margin-top: -20px;
 }
+
 .Random button {
   font-size: 2rem;
   background-color: transparent;
   border: none;
   margin-bottom: 20px;
 }
+
 .Random-buttons svg {
   overflow: visible;
 }
@@ -44,7 +47,7 @@
   box-shadow: 0px 0px 10px 1px #444;
 }
 
-.random-container {
+.Random-container {
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -52,14 +55,14 @@
   max-width: 250px;
 }
 
-p.random-container-title {
+p.Random-title {
   font-family: "Shadows Into Light", cursive;
   color: #4155b1;
   font-weight: 600;
   margin: 0;
 }
 
-.random-overlay-title {
+.Random-overlay-title {
   position: absolute;
   bottom: -10px;
   left: 0;
@@ -67,11 +70,11 @@ p.random-container-title {
   transition: bottom 1s cubic-bezier(0.65, -0.36, 0.43, 1.79);
 }
 
-.random-container:hover .random-overlay-title {
+.Random-container:hover .Random-overlay-title {
   bottom: 40px;
 }
 
-.random-overlay-title h3 {
+.Random-overlay-title h3 {
   font-family: "Shadows Into Light", cursive;
   font-size: 0.9rem;
   color: white;
@@ -106,7 +109,7 @@ p.random-container-title {
     transform: translateX(0);
     right: 10%;
   }
-  .random-overlay-title h3 {
+  .Random-overlay-title h3 {
     font-size: 0.7rem;
   }
 }

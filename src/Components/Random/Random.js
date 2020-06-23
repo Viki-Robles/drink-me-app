@@ -19,10 +19,10 @@ export default function Random({ listRandom, closeRandom, tryAgain }) {
         {listRandom.map((drink) => (
           <Link to={`/drink/${drink.strDrink}`}>
             <div key={drink.idDrink}>
-              <p className="random-container-title">Checkout this one!</p>
-              <div className="random-container">
+              <p className="Random-title">Checkout this one!</p>
+              <div className="Random-container">
                 <img src={drink.strDrinkThumb} alt="drink"/>
-                <div className="random-overlay-title">
+                <div className="Random-overlay-title">
                   <h3>{drink.strDrink}</h3>
                 </div>
               </div>

@@ -28,10 +28,10 @@ export default function Results(props) {
   } else {
     return (
       <div className="Results">
-        <div className="results-header">
+        <div className="Results-header">
           {drinks.length > 1 ? "Fancy any of these?" : "Fancy this one?"}
         </div>
-        <div className="results-container">
+        <div className="Results-container">
           {drinks.map(
             (drink) =>
               Number(drink.idDrink) !== 17246 && (
