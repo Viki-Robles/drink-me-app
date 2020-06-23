@@ -88,6 +88,9 @@ a {
 
 @media (min-width: 600px) {
 
+  .Main {
+    width: 100%;
+  }
 
   .Main h2 {
     color: rgb(65, 85, 177);
