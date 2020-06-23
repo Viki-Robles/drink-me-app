@@ -59,7 +59,7 @@ export default function Main() {
                       className="container-select"
                     >
                       <option selected disabled>
-                        Choose your ingredient here
+                        Choose ingredient
                       </option>
                       {listIngredients
                         .sort((drinkA, drinkB) =>

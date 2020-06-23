@@ -26,7 +26,7 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-bottom: 50px;
-  width: 80%;
+  width: 100%;
 }
 
 .Main .container-buttons-boxes {
@@ -37,7 +37,7 @@
 
 .Main .container-select {
   border: none;
-  padding: 10px;
+  padding: 20px;
   background-color: #21b6a8;
   width: 100%;
   border-radius: 4px;
@@ -59,7 +59,7 @@
   border-radius: 4px;
   color: white;
   background-color: rgb(65, 85, 177);
-  padding: 10px;
+  padding: 20px;
   font-size: 17px;
   font-weight: 400;
   box-shadow: -7px -7px 30px 0 rgba(255, 255, 255, 0.7),
