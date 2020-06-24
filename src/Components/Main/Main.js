@@ -58,9 +58,9 @@ export default function Main() {
                   <form className="container-form">
                     <select
                       onChange={(e) => setIngredient(e.target.value)}
-                      className="container-select"
+                      className="container-select" defaultValue="Choose ingredient"
                     >
-                      <option selected disabled>
+                      <option disabled>
                         Choose ingredient
                       </option>
                       {listIngredients
