@@ -51,7 +51,7 @@ export default function Main() {
                       className="button-random"
                       onClick={() => fetchRandomData(!buttonOn)}
                     >
-                      Feeling lucky
+                    Inspire me
                     </button>
                     <div className="random"></div>
                   </div>
@@ -61,11 +61,7 @@ export default function Main() {
                       className="container-select"
                     >
                       <option selected disabled>
-
                         Choose ingredient
-
-                       
-
                       </option>
                       {listIngredients
                         .sort((drinkA, drinkB) =>
