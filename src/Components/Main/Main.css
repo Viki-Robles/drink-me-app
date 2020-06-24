@@ -10,6 +10,7 @@
 
 .Main .container {
   padding-left: 5%;
+  margin-top: 50px;
 }
 
 .Main h2 {
@@ -36,9 +37,11 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 15px;
+  margin-top: 40px;
 }
 
 .Main .container-select {
+  height: 50px;
   border: none;
   padding: 20px;
   background-color: #21b6a8;
