@@ -3,6 +3,8 @@ import "./MainText.css";
 
 export default function MainText() {
   return (
-    <p>Choose your favourite ingredient or feeling lucky for a random drink.</p>
+    <p>Choose your favourite drink by ingredient or 
+      if you feel is your lucky day go for a random drink
+    .</p>
   );
 }
