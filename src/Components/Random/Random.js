@@ -9,16 +9,16 @@ export default function Random({ listRandom, closeRandom, tryAgain }) {
       <div className="Random-box">
         <div className="Random-buttons">
           <button onClick={tryAgain}>
-            <GrUpdate />
+            <GrUpdate className="Random-icon"/>
           </button>
-          <button onClick={closeRandom}>
+          <button className="Random-icon" onClick={closeRandom}>
             <GrClose />
           </button>
         </div>
 
         {listRandom.map((drink) => (
-          <Link to={`/drink/${drink.strDrink}`}>
-            <div key={drink.idDrink}>
+          <Link key={drink.idDrink} to={`/drink/${drink.strDrink}`}>
+            <div>
               <p className="Random-title">Checkout this one!</p>
               <div className="Random-container">
                 <img src={drink.strDrinkThumb} alt="drink"/>
